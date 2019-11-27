@@ -6,6 +6,7 @@
 		- Wenbi LIN
 		-Abdelhakim OUBRAHAM
 		-Issa DHIFI
+		- Nawfaz JUFFURALY
 
 ***Presentation du Projet***
 
