@@ -29,3 +29,5 @@
 
 	##important aussi lol 
 		- on push jamais avant de faire un pull et de verifier que qlq1 d'autre n'a pas modifier le projet entre temp
+
+-Wenbi try push on server distant 	
