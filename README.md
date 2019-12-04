@@ -1,12 +1,10 @@
-
-
 #Genie logiciel
-okok	##Membre de l'equipe:
+	##Membre de l'equipe:
 		- Yahia IHDENE
 		- Souad AIT HAMOUDA
 		- Wenbi LIN
 		-Abdelhakim OUBRAHAM
-		-Issa DHIFI "je vous explique", c'est un test pour moi
+		-Issa DHIFI
 		- Nawfaz JUFFURALY
 
 ***Presentation du Projet***
