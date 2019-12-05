@@ -1,7 +1,0 @@
-<resources>
-    <string name="app_name">MySport</string>
-    <string name="action_settings">Settings</string>
-    <string name="title_activity_inscription">Inscription</string>
-    <string name="title_activity_accueil">Accueil</string>
-    <string name="title_activity_recherche">Recherche</string>
-</resources>
