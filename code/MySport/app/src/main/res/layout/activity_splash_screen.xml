@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#00FFFF"
+    android:background="#015E5E"
     tools:context="com.example.mysport.SplashScreenActivity">
 
     <androidx.appcompat.widget.AppCompatImageView

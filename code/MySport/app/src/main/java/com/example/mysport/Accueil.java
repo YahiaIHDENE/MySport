@@ -10,11 +10,18 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 
+import java.util.ArrayList;
+
 public class Accueil extends AppCompatActivity {
 
+    ListView listAnnonce;
+    public static int positionAnnonce = 0;
+    public static ArrayList<String> arrayList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,12 +30,36 @@ public class Accueil extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        listAnnonce =(ListView) findViewById(R.id.listAnnonce);
+
+        arrayList.add("nawfaz");
+        arrayList.add("azdin");
+        arrayList.add("souad");
+        arrayList.add("wenbi");
+        arrayList.add("issa");
+        arrayList.add("hakim");
+        arrayList.add("nawfaz");
+        arrayList.add("azdin");
+        arrayList.add("souad");
+        arrayList.add("wenbi");
+        arrayList.add("issa");
+        arrayList.add("hakim");
+        arrayList.add("nawfaz");
+        arrayList.add("azdin");
+        arrayList.add("souad");
+        arrayList.add("wenbi");
+        arrayList.add("issa");
+        arrayList.add("hakim");
+
+        ArrayAdapter arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1,arrayList);
+        listAnnonce.setAdapter(arrayAdapter);
+
+        listAnnonce.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                positionAnnonce = position;
+
+                startActivity(new Intent(Accueil.this, AnnonceOnClick.class));
             }
         });
 
