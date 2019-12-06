@@ -1,0 +1,37 @@
+Utilisation Github
+
+avec git on peut faire l'historique des différentes version,  et de collaborer avec plusiers personnes
+
+1- Preparation du repos:
+    - crée un dossier : mkdir glog
+    - initailiser le dossier comme un repos :  git init
+    - rentrer vos information pour le compte ( de preference les même que le compte github sur le net)
+        -mail : git config --global user.email 'azd@azd.azd'
+        -nom : git config --global user.name 'nome du compte git'
+2- reccuperer le repos sur github (le net)
+    - cloner le repos : git clone https://github.com/YahiaIHDENE/MySport
+
+3- crée un fichier ou un dossier pour le mettre sur le net
+    - crée un fichier : touch fichier.txt /ou copier le fichier ou le dossier dans le repos git
+    - ajouter un fichier dans le repos local : git add fichier.txt
+    - prise en concederation du fichier par git : git commit -m "ecrivez un message explicatif concernat le fichier"
+    - voir les fichier avant /apres la sauvgarde:  git status
+    - enlever un fichier de la rès sauvgarde : git rm -r --cached fichier.txt (--cached permet de juste le retirer de la presauvgarde sans cette option il sera juste supprimé et -r si c un dossier avec 1..* fichiers /dossiers)
+4- se connecter au repos sur github
+    - git remot add origin master  https://github.com/YahiaIHDENE/MySport
+    - envoyer vos docs : git push -u origin master (ou juste git push pour tous)
+    -reccuperer les changement fait par qlq1 d'autre : git pull (il va tous reccup)
+
+
+
+    Resumé:
+    - mkdir glog
+    - git init
+    -mail : git config --global user.email 'azd@azd.azd'
+    -nom : git config --global user.name 'nome du compte git'
+    - cloner le repos : git clone https://github.com/YahiaIHDENE/MySport ou git remot add origin master  https://github.com/YahiaIHDENE/MySport
+    - git add fichier.txt
+    -  git status
+    - git commit -m "ecrivez un message explicatif concernat le fichier"
+    - git push
+    - git pull
