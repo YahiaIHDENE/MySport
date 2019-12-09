@@ -15,7 +15,7 @@ public class AnnonceOnClick extends AppCompatActivity {
 
     TextView text,res;
     Button reserver;
-    public static ArrayList<String> listReservations = new ArrayList<>();
+    public static ArrayList<TypeTerrain> listReservations = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,20 +28,17 @@ public class AnnonceOnClick extends AppCompatActivity {
         res = (TextView) findViewById(R.id.textView5);
         reserver = (Button) findViewById(R.id.button3);
 
-        text.setText("Voulez vous réservez ce terrain: " + Accueil.arrayList.get(Accueil.positionAnnonce) + " ?");
+        text.setText("Voulez vous réservez ce terrain ?");
 
         reserver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                listReservations.add(Accueil.arrayList.get(Accueil.positionAnnonce));
+                listReservations.add(Accueil.terrainList.get(Accueil.positionAnnonce));
                 res.setText("Vous avez bien réservé le terrain! ");
 
             }
 
         });
-
-
-
 
 
     }

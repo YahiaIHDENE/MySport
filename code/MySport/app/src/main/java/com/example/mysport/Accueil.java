@@ -9,6 +9,7 @@ import com.google.android.material.snackbar.Snackbar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.provider.ContactsContract;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -16,12 +17,17 @@ import android.widget.Button;
 import android.widget.ListView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Accueil extends AppCompatActivity {
 
-    ListView listAnnonce;
+
+    private ListView listAnnonce;
+    public static TerrainListAdapter terrainListAdapter;
+
+    public static List<TypeTerrain> terrainList = new ArrayList<>();
+
     public static int positionAnnonce = 0;
-    public static ArrayList<String> arrayList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,27 +38,18 @@ public class Accueil extends AppCompatActivity {
 
         listAnnonce =(ListView) findViewById(R.id.listAnnonce);
 
-        arrayList.add("nawfaz");
-        arrayList.add("azdin");
-        arrayList.add("souad");
-        arrayList.add("wenbi");
-        arrayList.add("issa");
-        arrayList.add("hakim");
-        arrayList.add("nawfaz");
-        arrayList.add("azdin");
-        arrayList.add("souad");
-        arrayList.add("wenbi");
-        arrayList.add("issa");
-        arrayList.add("hakim");
-        arrayList.add("nawfaz");
-        arrayList.add("azdin");
-        arrayList.add("souad");
-        arrayList.add("wenbi");
-        arrayList.add("issa");
-        arrayList.add("hakim");
+        FactoryTerrain factoryTerrain = new FactoryTerrain();
+        TypeTerrain typeTerrain = factoryTerrain.getInstanceTerrain("Football");
+        typeTerrain.setNom("footFive");
+        typeTerrain.setAdresse("Neuilly");
+        typeTerrain.setCapacity("8");
 
-        ArrayAdapter arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1,arrayList);
-        listAnnonce.setAdapter(arrayAdapter);
+        for(int i=0;i<4;i++) {
+            terrainList.add(typeTerrain);
+        }
+
+        terrainListAdapter = new TerrainListAdapter(getApplicationContext(),terrainList);
+        listAnnonce.setAdapter(terrainListAdapter);
 
         listAnnonce.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -70,6 +67,40 @@ public class Accueil extends AppCompatActivity {
                 startActivity(new Intent(Accueil.this, Recherche.class));
             }
         });
+
+
+        Button mesReservation = (Button) findViewById(R.id.mesRes);
+        mesReservation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Accueil.this, MesReservation.class));
+            }
+        });
+
+        Button mesAnnonce = (Button) findViewById(R.id.mesAnn);
+        mesAnnonce.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Accueil.this, MesAnnonce.class));
+            }
+        });
+
+        Button profil = (Button) findViewById(R.id.Profil);
+        profil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Accueil.this, Profil.class));
+            }
+        });
+
+        Button ajoutAnnonce = (Button) findViewById(R.id.ajoutAnn);
+        ajoutAnnonce.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Accueil.this, AjoutAnnonce.class));
+            }
+        });
+
 
 
     }
