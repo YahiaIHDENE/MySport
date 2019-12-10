@@ -26,7 +26,7 @@ interface UserHandler {
     String ENDPOINT = "http://96c69db8.ngrok.io/";
 
     @GET("/mysport/adduser")
-    Call<Void> addUser(int i);
+    Call<Void> addUser(String a);
 }
 
 public class Inscription extends AppCompatActivity {
@@ -85,7 +85,7 @@ public class Inscription extends AppCompatActivity {
                             tel.getText().toString(),
                             motDePasse.getText().toString());
 
-                    userHandler.addUser(30).enqueue(new Callback<Void>() {
+                    userHandler.addUser("aaa").enqueue(new Callback<Void>() {
                         @Override
                         public void onResponse(Call<Void> call, Response<Void> response) {
                             //int i = response.body();
@@ -105,11 +105,7 @@ public class Inscription extends AppCompatActivity {
 
                     Toast.makeText(Inscription.this,"Veuillez remplir tous les champs!" ,Toast.LENGTH_LONG).show();
                 }
-
             }
         });
-
-
     }
-
 }
