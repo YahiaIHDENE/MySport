@@ -23,10 +23,10 @@ import retrofit2.http.GET;
 import retrofit2.Retrofit;
 
 interface UserHandler {
-    String ENDPOINT = "http://8e849351.ngrok.io";
+    String ENDPOINT = "http://96c69db8.ngrok.io/";
 
     @GET("/mysport/adduser")
-    Call<Boolean> addUser(User user);
+    Call<Void> addUser(int i);
 }
 
 public class Inscription extends AppCompatActivity {
@@ -62,13 +62,43 @@ public class Inscription extends AppCompatActivity {
             public void onClick(View v) {
 
                 if(motDePasse.getText().toString().equals(confirmationMotDePasse.getText().toString())) {
-                    user = new User(nom.getText().toString(),
+
+                   /*userHandler.addUser(nom.getText().toString(),
                                     prenom.getText().toString(),
                                     email.getText().toString(),
                                     tel.getText().toString(),
-                                    motDePasse.getText().toString());
-                    userHandler.addUser(user);
-                    startActivity(new Intent(Inscription.this, MainActivity.class));
+                                    motDePasse.getText().toString()).enqueue(new Callback<Integer>() {
+                       @Override
+                       public void onResponse(Call<Integer> call, Response<Integer> response) {
+                           int i = response.body();
+                           Toast.makeText(Inscription.this,i,Toast.LENGTH_LONG).show();
+                       }
+
+                       @Override
+                       public void onFailure(Call<Integer> call, Throwable t) {
+                           Toast.makeText(Inscription.this,"marche pas",Toast.LENGTH_LONG).show();
+                       }
+                   });*/
+                    User user = new User(nom.getText().toString(),
+                            prenom.getText().toString(),
+                            email.getText().toString(),
+                            tel.getText().toString(),
+                            motDePasse.getText().toString());
+
+                    userHandler.addUser(30).enqueue(new Callback<Void>() {
+                        @Override
+                        public void onResponse(Call<Void> call, Response<Void> response) {
+                            //int i = response.body();
+                            //Toast.makeText(Inscription.this,i,Toast.LENGTH_LONG).show();
+                        }
+
+                        @Override
+                        public void onFailure(Call<Void> call, Throwable t) {
+                            Toast.makeText(Inscription.this,"marche pas",Toast.LENGTH_LONG).show();
+                        }
+                    });
+
+                    //startActivity(new Intent(Inscription.this, MainActivity.class));
                 }
 
                 else{
