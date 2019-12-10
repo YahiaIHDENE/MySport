@@ -61,7 +61,7 @@ public class Inscription extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if(motDePasse.toString().equals(confirmationMotDePasse.toString())) {
+                if(motDePasse.getText().toString().equals(confirmationMotDePasse.getText().toString())) {
                     user = new User(nom.getText().toString(),
                                     prenom.getText().toString(),
                                     email.getText().toString(),
@@ -69,13 +69,11 @@ public class Inscription extends AppCompatActivity {
                                     motDePasse.getText().toString());
                     userHandler.addUser(user);
                     startActivity(new Intent(Inscription.this, MainActivity.class));
-
                 }
 
                 else{
 
-                    Toast.makeText(Inscription.this,"Veuillez remplir tous les champs!",Toast.LENGTH_LONG).show();
-
+                    Toast.makeText(Inscription.this,"Veuillez remplir tous les champs!" ,Toast.LENGTH_LONG).show();
                 }
 
             }

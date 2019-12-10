@@ -2,120 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b6727802-5424-4de1-abf9-41c6df89614f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_gson_gson_2_6_1_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okhttp3_okhttp_3_2_0_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okio_okio_1_6_0_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_retrofit2_converter_gson_2_0_2_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_retrofit2_retrofit_2_0_2_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/.gradle/5.4.1/executionHistory/executionHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/.gradle/5.4.1/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/.gradle/5.4.1/fileContent/fileContent.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/.gradle/5.4.1/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/.gradle/5.4.1/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/.gradle/5.4.1/fileHashes/resourceHashesCache.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/.gradle/5.4.1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/.gradle/5.4.1/javaCompile/classAnalysis.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/.gradle/5.4.1/javaCompile/javaCompile.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/.gradle/5.4.1/javaCompile/taskHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/.gradle/vcs-1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/MySport.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/.idea/codeStyles/Project.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/app.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/appSOU.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/google-services.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/local.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/proguard-rules.pro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/androidTest/java/com/example/mysport/ExampleInstrumentedTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/java/com/example/mysport/ApplicationInterface/Accueil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/java/com/example/mysport/ApplicationInterface/AjoutAnnonce.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/java/com/example/mysport/ApplicationInterface/AnnonceOnClick.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/java/com/example/mysport/ApplicationInterface/Inscription.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/java/com/example/mysport/ApplicationInterface/MainActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/java/com/example/mysport/ApplicationInterface/MesAnnonce.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/java/com/example/mysport/ApplicationInterface/MesAnnonceOnClick.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/java/com/example/mysport/ApplicationInterface/MesReservOnClick.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/java/com/example/mysport/ApplicationInterface/MesReservation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/java/com/example/mysport/ApplicationInterface/ModifProfil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/java/com/example/mysport/ApplicationInterface/PageRecherche.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/java/com/example/mysport/ApplicationInterface/Profil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/java/com/example/mysport/ApplicationInterface/SplashScreenActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/java/com/example/mysport/POJO/Annonce.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/java/com/example/mysport/POJO/AnnonceListAdapter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/java/com/example/mysport/POJO/ConnexionBDD.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/java/com/example/mysport/POJO/ConnexionBDDImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/java/com/example/mysport/POJO/ConnexionBDDProxy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/java/com/example/mysport/POJO/FactoryTerrain.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/java/com/example/mysport/POJO/Recherche.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/java/com/example/mysport/POJO/Reservation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/java/com/example/mysport/POJO/Terrain.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/java/com/example/mysport/POJO/TypeTerrain.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/java/com/example/mysport/POJO/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/res/drawable/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/res/layout/activity_accueil.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/res/layout/activity_ajout_annonce.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/res/layout/activity_annonce_on_click.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/res/layout/activity_inscription.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/res/layout/activity_main.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/res/layout/activity_mes_annonce.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/res/layout/activity_mes_annonce_on_click.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/res/layout/activity_mes_reserv_on_click.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/res/layout/activity_mes_reservation.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/res/layout/activity_modif_profil.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/res/layout/activity_profil.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/res/layout/activity_recherche.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/res/layout/activity_splash_screen.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/res/layout/activity_terrain_list_adapter.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/res/layout/activity_type_terrain.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/res/layout/content_accueil.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/res/layout/content_annonce_on_click.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/res/layout/content_inscription.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/res/layout/content_main.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/res/layout/content_recherche.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/res/menu/menu_main.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/res/values/colors.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/res/values/dimens.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/res/values/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/main/res/values/styles.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/app/src/test/java/com/example/mysport/ExampleUnitTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/gradle.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/local.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySport/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/mysport/ApplicationInterface/Inscription.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/mysport/ApplicationInterface/Inscription.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -128,10 +23,9 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="6PQ0217406007099" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="192.168.56.101:5555" />
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
@@ -140,12 +34,12 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mysport/ApplicationInterface/Inscription.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="541">
-              <caret line="56" column="26" selection-start-line="56" selection-start-column="26" selection-end-line="56" selection-end-column="26" />
+            <state relative-caret-position="195">
+              <caret line="25" column="47" selection-start-line="25" selection-start-column="47" selection-end-line="25" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -156,12 +50,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mysport/POJO/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="735">
-              <caret line="59" column="45" selection-start-line="59" selection-start-column="45" selection-end-line="59" selection-end-column="45" />
-              <folding>
-                <element signature="e#507#508#0" expanded="true" />
-                <element signature="e#538#539#0" expanded="true" />
-              </folding>
+            <state>
+              <caret column="33" selection-start-column="33" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="32" column="64" lean-forward="true" selection-start-line="32" selection-start-column="64" selection-end-line="32" selection-end-column="64" />
             </state>
           </provider>
         </entry>
@@ -195,6 +103,7 @@
     </navigator>
     <panes>
       <pane id="ProjectPane" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -229,24 +138,12 @@
             </path>
             <path>
               <item name="MySport" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-            </path>
-            <path>
-              <item name="MySport" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="values" type="ddeffd01:AndroidResFolderTypeNode" />
-            </path>
-            <path>
-              <item name="MySport" type="1abcf292:AndroidViewProjectNode" />
               <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -257,6 +154,9 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/Android/Sdk" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../androidapp/IncrementFolder" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
   </component>
   <component name="RunDashboard">
@@ -350,32 +250,40 @@
     <frame x="1920" y="-2" width="1920" height="1082" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Capture Tool" />
-      <window_info active="true" content_ui="combo" id="Project" visible="true" weight="0.32977587" />
-      <window_info id="Structure" side_tool="true" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info id="Build Variants" side_tool="true" />
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="Resources Explorer" />
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Run" />
-      <window_info anchor="bottom" id="Logcat" />
-      <window_info anchor="bottom" id="TODO" />
-      <window_info anchor="bottom" id="Debug" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Build" visible="true" weight="0.3286638" />
-      <window_info anchor="bottom" id="Android Profiler" />
-      <window_info anchor="right" id="Device File Explorer" side_tool="true" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Gradle" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Palette&#9;" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.22251868" />
+      <window_info id="Structure" order="2" side_tool="true" />
+      <window_info id="Build Variants" order="3" side_tool="true" />
+      <window_info id="Image Layers" order="4" />
+      <window_info id="Designer" order="5" />
+      <window_info id="Resources Explorer" order="6" />
+      <window_info id="Capture Tool" order="7" />
+      <window_info id="Favorites" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Run" order="0" />
+      <window_info anchor="bottom" id="Logcat" order="1" />
+      <window_info anchor="bottom" id="TODO" order="2" />
+      <window_info anchor="bottom" id="Android Profiler" order="3" />
+      <window_info anchor="bottom" id="Debug" order="4" />
+      <window_info anchor="bottom" id="Terminal" order="5" />
+      <window_info anchor="bottom" id="Event Log" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Build" order="8" visible="true" weight="0.3286638" />
+      <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
+      <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="right" id="Gradle" order="2" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info anchor="right" id="Palette&#9;" order="4" />
+      <window_info anchor="right" id="Assistant" order="5" weight="0.32977587" />
     </layout>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -386,32 +294,21 @@
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
-          <caret line="32" column="64" selection-start-line="32" selection-start-column="64" selection-end-line="32" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+          <caret line="32" column="64" lean-forward="true" selection-start-line="32" selection-start-column="64" selection-end-line="32" selection-end-column="64" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mysport/POJO/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="59" column="45" selection-start-line="59" selection-start-column="45" selection-end-line="59" selection-end-column="45" />
-          <folding>
-            <element signature="e#507#508#0" expanded="true" />
-            <element signature="e#538#539#0" expanded="true" />
-          </folding>
+        <state>
+          <caret column="33" selection-start-column="33" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mysport/ApplicationInterface/Inscription.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="541">
-          <caret line="56" column="26" selection-start-line="56" selection-start-column="26" selection-end-line="56" selection-end-column="26" />
+        <state relative-caret-position="195">
+          <caret line="25" column="47" selection-start-line="25" selection-start-column="47" selection-end-line="25" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
