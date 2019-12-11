@@ -15,18 +15,25 @@ import com.example.mysport.POJO.ConnexionBDDProxy;
 import com.example.mysport.POJO.User;
 import com.example.mysport.R;
 
+import org.json.JSONObject;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.converter.gson.GsonConverterFactory;
+import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.Retrofit;
+import retrofit2.http.Header;
+import retrofit2.http.POST;
+import retrofit2.http.Path;
+import retrofit2.http.Query;
 
 interface UserHandler {
-    String ENDPOINT = "http://96c69db8.ngrok.io/";
+    String ENDPOINT = "http://552583bd.ngrok.io/";
 
     @GET("/mysport/adduser")
-    Call<Void> addUser(String a);
+    Call<Void> addUser();
 }
 
 public class Inscription extends AppCompatActivity {
@@ -85,11 +92,10 @@ public class Inscription extends AppCompatActivity {
                             tel.getText().toString(),
                             motDePasse.getText().toString());
 
-                    userHandler.addUser("aaa").enqueue(new Callback<Void>() {
+                    userHandler.addUser().enqueue(new Callback<Void>() {
                         @Override
                         public void onResponse(Call<Void> call, Response<Void> response) {
-                            //int i = response.body();
-                            //Toast.makeText(Inscription.this,i,Toast.LENGTH_LONG).show();
+                            Toast.makeText(Inscription.this,"marche",Toast.LENGTH_LONG).show();
                         }
 
                         @Override

@@ -1,8 +1,5 @@
 package mysport;
 
-import javax.xml.bind.annotation.XmlRootElement;
-
-@XmlRootElement
 public class User {
     private String lastname;
     private String firstname;
@@ -18,10 +15,6 @@ public class User {
         this.number = number;
         this.pw = pw;
         this.id = -1;
-    }
-    public User()
-    {
-
     }
 
     public String getLastname(){
@@ -68,8 +61,13 @@ public class User {
             this.number = number;
     }
 
-    public void setPW(String PW){
-        if (PW != null && PW != "")
-            this.email = email;
+    public void setPw(String pw){
+        if (pw != null && pw != "")
+            this.pw = pw;
+    }
+
+    public void setId(int id) {
+        if (id >= 0)
+            this.id = id;
     }
 }
