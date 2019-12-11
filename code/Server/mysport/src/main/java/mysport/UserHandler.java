@@ -54,15 +54,19 @@ public class UserHandler{
     @Produces(MediaType.APPLICATION_JSON)
     public String fetchUser(@PathParam("id") String id){
         Integer id_user = gson.fromJson(id, Integer.class);
-        String SELECT = "SELECT * FROM t_user WHERE id_user="+id_user.intValue();
+        String SELECT = "SELECT * FROM mysportdb.t_user WHERE id_user="+id_user.intValue();
         try {
             ps = conn.prepareStatement(SELECT);
             ResultSet rs = ps.executeQuery();
-            //rs.next();
-            User user = new User(rs.getString(3), rs.getString(2), rs.getString(4), rs.getString(6), rs.getString(5));
-            user.setId(Integer.parseInt(rs.getString(1)));
-            return gson.toJson(user);
+            if (rs.next()){
+                User user = new User(rs.getString("user_last_name"), rs.getString("user_last_name"), rs.getString("user_mail"), rs.getString("user_tel"), rs.getString("user_password"));
+                user.setId(Integer.parseInt(rs.getString("id_user")));
+                return gson.toJson(user);
+            } else {
+                return gson.toJson(new String("Can't construct object user"));
+            }
         } catch (Exception e){
+            e.printStackTrace();
             return gson.toJson(new String("Failure"));
         }
     }
