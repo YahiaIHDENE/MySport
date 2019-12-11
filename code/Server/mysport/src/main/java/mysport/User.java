@@ -19,6 +19,10 @@ public class User {
         this.pw = pw;
         this.id = -1;
     }
+    public User()
+    {
+
+    }
 
     public String getLastname(){
         return lastname;
