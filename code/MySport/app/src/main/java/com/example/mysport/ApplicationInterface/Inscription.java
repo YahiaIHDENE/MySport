@@ -14,26 +14,21 @@ import com.example.mysport.POJO.ConnexionBDD;
 import com.example.mysport.POJO.ConnexionBDDProxy;
 import com.example.mysport.POJO.User;
 import com.example.mysport.R;
-
-import org.json.JSONObject;
+import com.google.gson.Gson;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.converter.gson.GsonConverterFactory;
-import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.Retrofit;
-import retrofit2.http.Header;
-import retrofit2.http.POST;
 import retrofit2.http.Path;
-import retrofit2.http.Query;
 
 interface UserHandler {
-    String ENDPOINT = "http://552583bd.ngrok.io/";
+    String ENDPOINT = "  http://d171c87b.ngrok.io/";
 
-    @GET("/mysport/adduser")
-    Call<Void> addUser();
+    @GET("/mysport/adduser/{message}")
+    Call<String> addUser(@Path("message") String message);
 }
 
 public class Inscription extends AppCompatActivity {
@@ -68,49 +63,32 @@ public class Inscription extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if(motDePasse.getText().toString().equals(confirmationMotDePasse.getText().toString())) {
 
-                   /*userHandler.addUser(nom.getText().toString(),
-                                    prenom.getText().toString(),
-                                    email.getText().toString(),
-                                    tel.getText().toString(),
-                                    motDePasse.getText().toString()).enqueue(new Callback<Integer>() {
-                       @Override
-                       public void onResponse(Call<Integer> call, Response<Integer> response) {
-                           int i = response.body();
-                           Toast.makeText(Inscription.this,i,Toast.LENGTH_LONG).show();
-                       }
-
-                       @Override
-                       public void onFailure(Call<Integer> call, Throwable t) {
-                           Toast.makeText(Inscription.this,"marche pas",Toast.LENGTH_LONG).show();
-                       }
-                   });*/
+                Gson gson = new Gson();
                     User user = new User(nom.getText().toString(),
                             prenom.getText().toString(),
                             email.getText().toString(),
                             tel.getText().toString(),
                             motDePasse.getText().toString());
 
-                    userHandler.addUser().enqueue(new Callback<Void>() {
-                        @Override
-                        public void onResponse(Call<Void> call, Response<Void> response) {
-                            Toast.makeText(Inscription.this,"marche",Toast.LENGTH_LONG).show();
-                        }
+                String json = gson.toJson(user);
+                System.out.println("==============");
+                System.out.println(json);
+                System.out.println("==============");
 
+                    userHandler.addUser(json).enqueue(new Callback<String>() {
                         @Override
-                        public void onFailure(Call<Void> call, Throwable t) {
+                        public void onResponse(Call<String> call, Response<String> response) {
+                            Toast.makeText(Inscription.this,response.body(),Toast.LENGTH_LONG).show();
+
+                        }
+                        @Override
+                        public void onFailure(Call<String> call, Throwable t) {
                             Toast.makeText(Inscription.this,"marche pas",Toast.LENGTH_LONG).show();
                         }
                     });
 
-                    //startActivity(new Intent(Inscription.this, MainActivity.class));
-                }
-
-                else{
-
-                    Toast.makeText(Inscription.this,"Veuillez remplir tous les champs!" ,Toast.LENGTH_LONG).show();
-                }
+                    startActivity(new Intent(Inscription.this, MainActivity.class));
             }
         });
     }
