@@ -9,6 +9,18 @@
     tools:showIn="@layout/activity_inscription">
 
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="153dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginLeft="128dp"
+        android:layout_marginTop="16dp"
+        android:text="MySport"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <EditText
         android:id="@+id/nom"
         android:layout_width="wrap_content"
@@ -95,10 +107,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="160dp"
         android:layout_marginLeft="160dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginTop="48dp"
         android:text="Inscription"
-        app:layout_constraintBottom_toTopOf="@+id/nom"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/confirmerMdp"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
