@@ -59,15 +59,15 @@ public class UserHandler{
             ps = conn.prepareStatement(SELECT);
             ResultSet rs = ps.executeQuery();
             if (rs.next()){
-                User user = new User(rs.getString("user_last_name"), rs.getString("user_last_name"), rs.getString("user_mail"), rs.getString("user_tel"), rs.getString("user_password"));
+                User user = new User(rs.getString("user_last_name"), rs.getString("user_first_name"), rs.getString("user_mail"), rs.getString("user_tel"), rs.getString("user_password"));
                 user.setId(Integer.parseInt(rs.getString("id_user")));
                 return gson.toJson(user);
             } else {
-                return gson.toJson(new String("Can't construct object user"));
+                return gson.toJson(null);
             }
         } catch (Exception e){
             e.printStackTrace();
-            return gson.toJson(new String("Failure"));
+            return gson.toJson(null);
         }
     }
 }
