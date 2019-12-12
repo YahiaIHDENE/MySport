@@ -24,19 +24,15 @@ import retrofit2.http.GET;
 import retrofit2.Retrofit;
 import retrofit2.http.Path;
 
-interface UserHandler {
-    String ENDPOINT = "  http://d171c87b.ngrok.io/";
 
-    @GET("/mysport/adduser/{message}")
-    Call<String> addUser(@Path("message") String message);
-}
 
 public class Inscription extends AppCompatActivity {
 
     EditText nom,prenom,email,motDePasse,confirmationMotDePasse,tel;
     Button btn;
     User user;
-    UserHandler userHandler;
+    UserHandler userHandler =new UserHandler();
+    AddUserJob addUserJob =new AddUserJob();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,43 +48,22 @@ public class Inscription extends AppCompatActivity {
         motDePasse = findViewById(R.id.Mdp);
         confirmationMotDePasse = findViewById(R.id.confirmerMdp);
         btn = findViewById(R.id.btnInscription);
-        userHandler = new Retrofit.Builder()
-                          .baseUrl(UserHandler.ENDPOINT)
-                          .addConverterFactory(GsonConverterFactory.create())
-                          .build()
-                          .create(UserHandler.class);
 
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-
-                Gson gson = new Gson();
                     User user = new User(nom.getText().toString(),
                             prenom.getText().toString(),
                             email.getText().toString(),
                             tel.getText().toString(),
                             motDePasse.getText().toString());
 
-                String json = gson.toJson(user);
-                System.out.println("==============");
-                System.out.println(json);
-                System.out.println("==============");
 
-                    userHandler.addUser(json).enqueue(new Callback<String>() {
-                        @Override
-                        public void onResponse(Call<String> call, Response<String> response) {
-                            Toast.makeText(Inscription.this,response.body(),Toast.LENGTH_LONG).show();
+                    userHandler.addUser(user, addUserJob );
 
-                        }
-                        @Override
-                        public void onFailure(Call<String> call, Throwable t) {
-                            Toast.makeText(Inscription.this,"marche pas",Toast.LENGTH_LONG).show();
-                        }
-                    });
-
-                    startActivity(new Intent(Inscription.this, MainActivity.class));
+                    //startActivity(new Intent(Inscription.this, MainActivity.class));
             }
         });
     }
