@@ -30,6 +30,8 @@ public class UserHandler{
     @Path("/adduser/{user}")
     public int addUser(@PathParam("user") String user) {
         User received_user = gson.fromJson(user, User.class);
+	//String test = "SELECT COUNT(*) FROM mysportdb.t_user WHERE user_mail ='"+received_user.getEmail()+"'";
+	
         String INSERT = "INSERT INTO mysportdb.t_user (user_first_name," +
                                                      " user_last_name," +
                                                      " user_mail," +
@@ -41,7 +43,16 @@ public class UserHandler{
                                                       received_user.getPW() + "', '"+
                                                       received_user.getNumber() + "')";
         try {
-            ps = conn.prepareStatement(INSERT);
+            /* ps.conn.prepareStatement(test);
+             ResultSet rs= ps.executeQuery();
+	     while(rs.next()){
+        		count=rs.getInt(1);
+			if (count>0){
+				return 0;				
+			}
+			else{....			
+		*/
+	ps = conn.prepareStatement(INSERT);
             ps.execute();
             return 0;
         } catch (Exception e){
