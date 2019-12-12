@@ -42,10 +42,15 @@ public class AnnonceListAdapter extends BaseAdapter {
         TextView terrainNom = v.findViewById(R.id.terrain_name);
         TextView terrainCapacity = v.findViewById(R.id.terrain_capacity);
         TextView terrainAdresse = v.findViewById(R.id.terrain_adresse);
+        TextView date = v.findViewById(R.id.date);
+        TextView typeSport = v.findViewById(R.id.type_terrain);
 
         terrainNom.setText(annonceList.get(position).terrain.getNom());
         terrainCapacity.setText((annonceList.get(position).terrain.getCapacity()) + " places disponible.");
-        terrainAdresse.setText(annonceList.get(position).terrain.getAdresse());
+        terrainAdresse.setText(annonceList.get(position).terrain.getAdresse() + " " + annonceList.get(position).terrain.getCodePostal());
+        date.setText(annonceList.get(position).getDateDisponible().toString());
+        typeSport.setText(annonceList.get(position).terrain.getTypeSport());
+
 
         v.setTag(annonceList.get(position).terrain.getId());
 

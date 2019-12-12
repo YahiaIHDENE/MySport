@@ -13,8 +13,8 @@ import android.widget.Toast;
 import com.example.mysport.POJO.Annonce;
 import com.example.mysport.POJO.ConnexionBDD;
 import com.example.mysport.POJO.ConnexionBDDProxy;
-import com.example.mysport.POJO.FactoryTerrain;
-import com.example.mysport.POJO.TypeTerrain;
+import com.example.mysport.POJO.FactoryItem;
+import com.example.mysport.POJO.Item;
 import com.example.mysport.R;
 
 import java.text.DateFormat;
@@ -53,7 +53,7 @@ public class AjoutAnnonce extends AppCompatActivity {
                 String Adresse = adresse.getText().toString();
                 String Type = typeTerrain.getText().toString();
                 String Capa = capacity.getText().toString();
-                //int Capacity = Integer.parseInt(Capa); AUTRE METHODE ?????????????????????
+                int Capacity = new Integer(Capa);
 
                 DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
 
@@ -63,16 +63,19 @@ public class AjoutAnnonce extends AppCompatActivity {
                     e.printStackTrace();
                 }
 
-                FactoryTerrain factoryTerrain = new FactoryTerrain();
-                TypeTerrain typeTerrain = factoryTerrain.getInstanceTerrain(Type);
-                typeTerrain.setNom(Nom);
-                typeTerrain.setAdresse(Adresse);
-                //typeTerrain.setCapacity(Capacity);
+                FactoryItem factoryItem = new FactoryItem();
+                Item item = factoryItem.getInstanceItem(Type);
+                item.setNom(Nom);
+                item.setAdresse(Adresse);
+                item.setCapacity(Capacity);
 
                 Annonce annonce = new Annonce();
-                annonce.setTerrain(typeTerrain);
+                annonce.setTerrain(item);
                 annonce.setDateDisponible(dateDisponible);
-                //annonce.setNombreDePlaceRestant(Capacity);
+                annonce.setNombreDePlaceRestant(Capacity);
+
+                Accueil.annonceList.add(annonce);
+                Accueil.annonceListAdapter.notifyDataSetChanged();
 
                 connexionBDD = new ConnexionBDDProxy();
                 connexionBDD.posterAnnonce(annonce);

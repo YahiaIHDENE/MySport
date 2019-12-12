@@ -1,11 +1,12 @@
 package com.example.mysport.POJO;
 
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 public class Annonce {
     Date dateDisponible,creneau;
     int nombreDePlaceRestant=0;
-    TypeTerrain terrain;
+    Item terrain;
 
     public Date getDateDisponible() {
         return dateDisponible;
@@ -31,11 +32,11 @@ public class Annonce {
         this.nombreDePlaceRestant = nombreDePlaceRestant;
     }
 
-    public TypeTerrain getTerrain() {
+    public Item getTerrain() {
         return terrain;
     }
 
-    public void setTerrain(TypeTerrain terrain) {
+    public void setTerrain(Item terrain) {
         this.terrain = terrain;
     }
 

@@ -27,7 +27,7 @@ public class MesReservOnClick extends AppCompatActivity {
         res = (TextView) findViewById(R.id.textView5);
         reserver = (Button) findViewById(R.id.button3);
 
-        text.setText("Voulez vous supprimer " + MesAnnonce.arrayList.get(MesAnnonce.positionAnnonce) + " ?");
+        text.setText("Voulez vous supprimer " + MesAnnonce.listMesAnnonces.get(MesAnnonce.positionAnnonce) + " ?");
 
        /* reserver.setOnClickListener(new View.OnClickListener() {
             @Override

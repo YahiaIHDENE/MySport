@@ -29,14 +29,22 @@ public class ConnexionBDDImpl implements ConnexionBDD {
     }
 
     @Override
-    public List<Annonce> recupererAnnonces() {
-
-        //Se connecte à l'Url pour recuperer une liste d'annonce
+    public List<Annonce> recupererMesAnnonces(String user_id) {
         return null;
+    }
+
+    @Override
+    public void supprimerMesAnnonces(String user_id, Annonce annonce) {
+
     }
 
     @Override
     public void reserver(int userId, Annonce annonce) {
 
+    }
+
+    @Override
+    public List<Annonce> rechercherAnnonces(Recherche recherche) {
+        return null;
     }
 }
