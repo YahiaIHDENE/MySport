@@ -30,6 +30,8 @@ public class UserHandler{
     @Path("/adduser/{user}")
     public int addUser(@PathParam("user") String user) {
         User received_user = gson.fromJson(user, User.class);
+	//String test = "SELECT COUNT(*) FROM mysportdb.t_user WHERE user_mail ='"+received_user.getEmail()+"'";
+	
         String INSERT = "INSERT INTO mysportdb.t_user (user_first_name," +
                                                      " user_last_name," +
                                                      " user_mail," +
@@ -41,7 +43,16 @@ public class UserHandler{
                                                       received_user.getPW() + "', '"+
                                                       received_user.getNumber() + "')";
         try {
-            ps = conn.prepareStatement(INSERT);
+            /* ps.conn.prepareStatement(test);
+             ResultSet rs= ps.executeQuery();
+	     while(rs.next()){
+        		count=rs.getInt(1);
+			if (count>0){
+				return 0;				
+			}
+			else{....			
+		*/
+	ps = conn.prepareStatement(INSERT);
             ps.execute();
             return 0;
         } catch (Exception e){
@@ -59,15 +70,15 @@ public class UserHandler{
             ps = conn.prepareStatement(SELECT);
             ResultSet rs = ps.executeQuery();
             if (rs.next()){
-                User user = new User(rs.getString("user_last_name"), rs.getString("user_last_name"), rs.getString("user_mail"), rs.getString("user_tel"), rs.getString("user_password"));
+                User user = new User(rs.getString("user_last_name"), rs.getString("user_first_name"), rs.getString("user_mail"), rs.getString("user_tel"), rs.getString("user_password"));
                 user.setId(Integer.parseInt(rs.getString("id_user")));
                 return gson.toJson(user);
             } else {
-                return gson.toJson(new String("Can't construct object user"));
+                return gson.toJson(null);
             }
         } catch (Exception e){
             e.printStackTrace();
-            return gson.toJson(new String("Failure"));
+            return gson.toJson(null);
         }
     }
 }

@@ -1,10 +1,18 @@
 package com.example.mysport.POJO;
 
-public class Terrain extends TypeTerrain {
+public class Terrain extends Item {
 
-    String nom,codePostal,adresse;
+    String nom,codePostal,adresse,typeSport;
     int capacity;
     int id;
+
+    public String getTypeSport() {
+        return typeSport;
+    }
+
+    public void setTypeSport(String typeSport) {
+        this.typeSport = typeSport;
+    }
 
     public int getId() {
         return id;

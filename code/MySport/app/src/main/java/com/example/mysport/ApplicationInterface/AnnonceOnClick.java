@@ -8,13 +8,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.mysport.ApplicationInterface.Accueil;
 import com.example.mysport.POJO.ConnexionBDD;
 import com.example.mysport.POJO.ConnexionBDDProxy;
-import com.example.mysport.POJO.TypeTerrain;
 import com.example.mysport.R;
-
-import java.util.ArrayList;
 
 
 public class AnnonceOnClick extends AppCompatActivity {

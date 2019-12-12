@@ -9,7 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".POJO.TypeTerrain"></activity>
+        <activity android:name=".ApplicationInterface.AnnonceRechercherOnClick"></activity>
+        <activity android:name=".ApplicationInterface.RecherchePage" />
+        <activity
+            android:name=".ApplicationInterface.AnnoncesRecherchEs"
+            android:label="@string/title_activity_annonces_recherch_es"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".POJO.Item" />
         <activity android:name=".POJO.TerrainListAdapter" />
         <activity android:name=".ApplicationInterface.ModifProfil" />
         <activity android:name="com.example.mysportApp.ModifProfil" />

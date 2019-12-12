@@ -1,37 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:paddingLeft="10dp"
-    android:paddingRight="10dp"
-    android:paddingBottom="5dp"
-    android:paddingTop="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="#ffff"
-    android:layout_height="match_parent">
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingTop="5dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="5dp">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/terrain_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="terrain"
-        android:textSize="20dp"
-        android:textColor="#00a7f5" />
+        android:textColor="#00a7f5"
+        android:textSize="20dp" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/terrain_capacity"
-        android:text="capacity"
-        android:textSize="20dp"
-        android:textColor="#f92a3F" />
-
-    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/terrain_adresse"
-        android:text="adresse"
-        android:textSize="20dp"
-        android:textColor="#000" />
+        android:text="capacity"
+        android:textColor="#f92a3F"
+        android:textSize="20dp" />
 
+    <TextView
+        android:id="@+id/terrain_adresse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="adresse"
+        android:textColor="#000"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/type_terrain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="type terrain"
+        android:textColor="#FF5722"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date"
+        android:textColor="#2196F3"
+        android:textSize="18sp" />
 
 
 </LinearLayout>

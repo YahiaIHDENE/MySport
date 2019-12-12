@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class Recherche {
 
-    Date date,creneau;
+    Date date;
     String ville,typeSport;
 
     public Date getDate() {
@@ -13,14 +13,6 @@ public class Recherche {
 
     public void setDate(Date date) {
         this.date = date;
-    }
-
-    public Date getCreneau() {
-        return creneau;
-    }
-
-    public void setCreneau(Date creneau) {
-        this.creneau = creneau;
     }
 
     public String getVille() {
