@@ -10,6 +10,8 @@ public interface ConnexionBDD {
     boolean checkUser(User user);
     int getIdUser(User user);
     void posterAnnonce(Annonce annonce);
-    List<Annonce> recupererAnnonces();
+    List<Annonce> recupererMesAnnonces(String user_id);
+    void supprimerMesAnnonces(String user_id,Annonce annonce);
     void reserver(int userId,Annonce annonce);
+    List<Annonce> rechercherAnnonces(Recherche recherche);
 }
