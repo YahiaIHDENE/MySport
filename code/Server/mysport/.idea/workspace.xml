@@ -7,23 +7,89 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7d51c2d-7a80-49cb-b8db-67ef33c12a7e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/mysport/Recherche.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/mysport_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/mysport_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mysport/Annonce.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mysport/Annonce.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mysport/AnnonceHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mysport/AnnonceHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mysport/MySportApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mysport/MySportApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/mysport/UserHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mysport/UserHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mysport/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mysport/test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mysport/UserHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mysport/UserHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/mysport.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/mysport.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/mysport/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/mysport/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/mysport/WEB-INF/classes/mysport/UserHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/mysport/WEB-INF/classes/mysport/UserHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/mysport/WEB-INF/lib/gson-2.6.1.jar" beforeDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="base_donnee_my_sport" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="base_donnee_my_sport" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="base_donnee_my_sport" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="myDb: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="base_donnee_my_sport" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="myDb: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="t_annonce: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="base_donnee_my_sport" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="myDb: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="t_terrain: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="base_donnee_my_sport" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="myDb: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="t_user: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="mysport" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="AnnotationType" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -33,48 +99,139 @@
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
-    <option name="FILTER_INFO" value="true" />
-    <option name="FILTER_DEBUG" value="true" />
+    <option name="FILTER_INFO" value="false" />
+    <option name="FILTER_DEBUG" value="false" />
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
         <option name="importAutomatically" value="true" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
       </MavenImportingSettings>
     </option>
   </component>
   <component name="ProjectId" id="1UkPtNk0pgnxENk7H7hZvwx4Wml" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/mysport" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/mysport" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="mysport" />
+    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="mysport" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Tomcat Server.tomcat">
+    <configuration name="test" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="mysport.test" />
+      <module name="mysport" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="mysport.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Unnamed" type="Remote" nameIsGenerated="true">
+      <module name="mysport" />
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <option name="AUTO_RESTART" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment />
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="_mysport" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="41927" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="mysport" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.16 (Ubuntu)" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/mysport/" />
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/mysport" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="mysport:war">
@@ -146,6 +303,113 @@
         </option>
       </method>
     </configuration>
+    <configuration name="tomcat" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.16 (Ubuntu)" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8081/mysport_war/" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="mysport:war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/mysport_war" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_mysport" />
+        <option name="HTTP_PORT" value="8081" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="37693" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="mysport:war" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.test" />
+      <item itemvalue="Remote.Unnamed" />
+      <item itemvalue="Tomcat Server.tomcat" />
+      <item itemvalue="Tomcat Server.mysport" />
+    </list>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <option name="contentProportion" value="0.14778325" />
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:base_donnee_my_sport" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -168,6 +432,11 @@
       <workItem from="1576080189721" duration="181000" />
       <workItem from="1576080556141" duration="18000" />
       <workItem from="1576080713647" duration="2981000" />
+      <workItem from="1576179356020" duration="254000" />
+      <workItem from="1576180393497" duration="166000" />
+      <workItem from="1576180574969" duration="506000" />
+      <workItem from="1576181094113" duration="698000" />
+      <workItem from="1576181810078" duration="63738000" />
     </task>
     <servers />
   </component>
@@ -186,5 +455,143 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="588" y="214" width="800" height="677" key="#Inspections" timestamp="1576259262660">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="588" y="214" width="800" height="677" key="#Inspections/67.27.1853.1053@67.27.1853.1053" timestamp="1576259262660" />
+    <state x="586" y="213" width="800" height="677" key="#Tomcat_Server" timestamp="1576225625959">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="586" y="213" width="800" height="677" key="#Tomcat_Server/67.27.1853.1053@67.27.1853.1053" timestamp="1576225625959" />
+    <state x="471" y="322" width="906" height="677" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1576257425970">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="471" y="322" width="906" height="677" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1576257425970" />
+    <state x="801" y="264" width="374" height="577" key="#com.intellij.ide.util.MemberChooser" timestamp="1576282582782">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="801" y="264" width="374" height="577" key="#com.intellij.ide.util.MemberChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1576282582782" />
+    <state x="726" y="301" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1576234045482">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="726" y="301" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1576234045482" />
+    <state x="843" y="85" width="685" height="725" key="#tomcat" timestamp="1576182395078">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="843" y="85" width="685" height="725" key="#tomcat/67.27.1853.1053@67.27.1853.1053" timestamp="1576182395078" />
+    <state x="522" y="149" width="932" height="807" key="CommitChangelistDialog2" timestamp="1576225788759">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="522" y="149" width="932" height="807" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1576225788759" />
+    <state x="1051" y="432" width="424" height="484" key="FileChooserDialogImpl" timestamp="1576225624536">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="1051" y="432" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1576225624536" />
+    <state width="1279" height="370" key="GridCell.Tab.0.bottom" timestamp="1576292714579">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1279" height="370" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1576292714579" />
+    <state width="1279" height="370" key="GridCell.Tab.0.center" timestamp="1576292714579">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1279" height="370" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1576292714579" />
+    <state width="1279" height="370" key="GridCell.Tab.0.left" timestamp="1576292714579">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1279" height="370" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1576292714579" />
+    <state width="1279" height="370" key="GridCell.Tab.0.right" timestamp="1576292714579">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1279" height="370" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1576292714579" />
+    <state width="1279" height="370" key="GridCell.Tab.1.bottom" timestamp="1576292714528">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1279" height="370" key="GridCell.Tab.1.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1576292714528" />
+    <state width="1279" height="370" key="GridCell.Tab.1.center" timestamp="1576292714526">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1279" height="370" key="GridCell.Tab.1.center/67.27.1853.1053@67.27.1853.1053" timestamp="1576292714526" />
+    <state width="1279" height="370" key="GridCell.Tab.1.left" timestamp="1576292714526">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1279" height="370" key="GridCell.Tab.1.left/67.27.1853.1053@67.27.1853.1053" timestamp="1576292714526" />
+    <state width="1279" height="370" key="GridCell.Tab.1.right" timestamp="1576292714528">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1279" height="370" key="GridCell.Tab.1.right/67.27.1853.1053@67.27.1853.1053" timestamp="1576292714528" />
+    <state width="1279" height="370" key="GridCell.Tab.2.bottom" timestamp="1576292714526">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1279" height="370" key="GridCell.Tab.2.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1576292714526" />
+    <state width="1279" height="370" key="GridCell.Tab.2.center" timestamp="1576292714526">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1279" height="370" key="GridCell.Tab.2.center/67.27.1853.1053@67.27.1853.1053" timestamp="1576292714526" />
+    <state width="1279" height="370" key="GridCell.Tab.2.left" timestamp="1576292714526">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1279" height="370" key="GridCell.Tab.2.left/67.27.1853.1053@67.27.1853.1053" timestamp="1576292714526" />
+    <state width="1279" height="370" key="GridCell.Tab.2.right" timestamp="1576292714526">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1279" height="370" key="GridCell.Tab.2.right/67.27.1853.1053@67.27.1853.1053" timestamp="1576292714526" />
+    <state width="1037" height="278" key="GridCell.Tab.3.bottom" timestamp="1576256505104">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1037" height="278" key="GridCell.Tab.3.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1576256505104" />
+    <state width="1037" height="278" key="GridCell.Tab.3.center" timestamp="1576256505104">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1037" height="278" key="GridCell.Tab.3.center/67.27.1853.1053@67.27.1853.1053" timestamp="1576256505104" />
+    <state width="1037" height="278" key="GridCell.Tab.3.left" timestamp="1576256505104">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1037" height="278" key="GridCell.Tab.3.left/67.27.1853.1053@67.27.1853.1053" timestamp="1576256505104" />
+    <state width="1037" height="278" key="GridCell.Tab.3.right" timestamp="1576256505104">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1037" height="278" key="GridCell.Tab.3.right/67.27.1853.1053@67.27.1853.1053" timestamp="1576256505104" />
+    <state width="327" height="500" key="HiddenNamespacesPopup" timestamp="1576229107061">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="327" height="500" key="HiddenNamespacesPopup/67.27.1853.1053@67.27.1853.1053" timestamp="1576229107061" />
+    <state x="145" y="27" width="1536" height="1053" key="SettingsEditor" timestamp="1576284136154">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="145" y="27" width="1536" height="1053" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1576284136154" />
+    <state x="649" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1576181813636">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="649" y="380" key="com.intellij.ide.util.TipDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1576181813636" />
+    <state x="566" y="200" width="844" height="704" key="com.intellij.javaee.view.ServerArtifactsDialog" timestamp="1576255593585">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="566" y="200" width="844" height="704" key="com.intellij.javaee.view.ServerArtifactsDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1576255593585" />
+    <state x="761" y="472" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1576272567847">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="761" y="472" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/67.27.1853.1053@67.27.1853.1053" timestamp="1576272567847" />
+    <state x="656" y="257" key="search.everywhere.popup" timestamp="1576248373941">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="656" y="257" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1576248373941" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/mysport/test.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/mysport/UserHandler.java</url>
+          <line>101</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

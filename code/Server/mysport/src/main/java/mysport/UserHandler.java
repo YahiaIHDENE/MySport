@@ -14,6 +14,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Locale;
 
 @Path("/")
@@ -101,6 +102,8 @@ public class UserHandler{
     @GET
     @Path("/addAnnonce/{annonce}")
     public String addAnnonce(@PathParam("annonce") String annonce) {
+
+        // TODO : version 1 avant deserialisation ca fonctionne vaut mieux changer
         Gson gson = new Gson();
         System.out.println(annonce);
         // get json objet
@@ -190,7 +193,7 @@ public class UserHandler{
     }
 
     @GET
-    @Path("/deletAnnonce/{id}")
+    @Path("/deleteAnnonce/{id}")
     public int deleteUser(@PathParam("id") String id) {
 
         Integer id_annonce = gson.fromJson(id, Integer.class);
@@ -199,12 +202,112 @@ public class UserHandler{
         try {
             ps = conn.prepareStatement(DELETE);
             ps.execute();
+            System.out.println("Delete success");
             return 1;
         } catch (Exception e){
             return -1;
         }
+
+    }
+
+    @GET
+    @Path("/getMesAnnonces/{id}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public String getMesAnnonces(@PathParam("id") String id){
+        Integer id_user = gson.fromJson(id, Integer.class);
+        String SELECT = "SELECT * FROM myDb.t_annonce INNER JOIN myDb.t_terrain WHERE myDb.t_terrain.id_annonce = myDb.t_annonce.id_annonce " +
+                "and myDb.t_annonce.id_user ="+ id_user;
+        System.out.println(SELECT);
+        ArrayList<Annonce> mesAnnonces = new ArrayList<Annonce>();
+        ResultSet rs =null;
+        String rsaa = null;
+
+        try {
+            ps = conn.prepareStatement(SELECT);
+            rs = ps.executeQuery();
+            String typeItem = "Terrain";
+            while (rs.next()){
+                System.out.println(rs.toString());
+                Annonce a= new Annonce();
+                FactoryItem f = new FactoryItem();
+                Item terr = f.getInstanceItem(typeItem);
+                terr.setAdresse(rs.getString("adresse"));
+                terr.setCapacity(rs.getInt("capacite"));
+                terr.setCodePostal(rs.getString("code_postal"));
+                terr.setTypeSport(rs.getString("type_sport"));
+                terr.setId(rs.getInt("id_terrain"));
+                rsaa = rs.toString();
+                a.setDateDisponible(rs.getDate("jour_debut"));
+                a.setIdUser(rs.getInt("id_user"));
+                a.setCreneau(rs.getDate("heure_debut"));
+                a.setTerrain(terr);
+                mesAnnonces.add(a);
+
+            }
+            String json= gson.toJson(mesAnnonces);
+
+            return (json );
+
+
+        } catch (Exception e){
+            e.printStackTrace();
+            return gson.toJson(new String("Failure"+rsaa +e.getMessage()));
+        }
+
+    }
+/*
+    @GET
+    @Path("/getRecherche/{recherche}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public String rechecheAnnonce(@PathParam("recherche") String recherche){
+        Recherche json = gson.fromJson(recherche, Recherche.class);
+
+
+        SimpleDateFormat sdf = new SimpleDateFormat("MMM dd, yyyy, hh:mm:ss a", Locale.US);
+        String SELECT = "SELECT * FROM myDb.t_annonce INNER JOIN myDb.t_terrain WHERE myDb.t_terrain.id_annonce = myDb.t_annonce.id_annonce " +
+                "and myDb.t_annonce.id_user ="+ id_user;
+        System.out.println(SELECT);
+        ArrayList<Annonce> mesAnnonces = new ArrayList<Annonce>();
+        ResultSet rs =null;
+        String rsaa = null;
+
+        try {
+            ps = conn.prepareStatement(SELECT);
+            rs = ps.executeQuery();
+            String typeItem = "Terrain";
+            while (rs.next()){
+                System.out.println(rs.toString());
+                Annonce a= new Annonce();
+                FactoryItem f = new FactoryItem();
+                Item terr = f.getInstanceItem(typeItem);
+                terr.setAdresse(rs.getString("adresse"));
+                terr.setCapacity(rs.getInt("capacite"));
+                terr.setCodePostal(rs.getString("code_postal"));
+                terr.setTypeSport(rs.getString("type_sport"));
+                terr.setId(rs.getInt("id_terrain"));
+                rsaa = rs.toString();
+                a.setDateDisponible(rs.getDate("jour_debut"));
+                a.setIdUser(rs.getInt("id_user"));
+                a.setCreneau(rs.getDate("heure_debut"));
+                a.setTerrain(terr);
+                mesAnnonces.add(a);
+
+            }
+            String json= gson.toJson(mesAnnonces);
+
+            return (json );
+
+
+        } catch (Exception e){
+            e.printStackTrace();
+            return gson.toJson(new String("Failure"+rsaa +e.getMessage()));
+        }
+
     }
 
 
+
+
+*/
 
 }

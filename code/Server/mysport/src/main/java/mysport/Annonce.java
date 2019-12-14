@@ -67,4 +67,5 @@ public class Annonce {
     public String getTypeItem(){
         return typeItem;
     }
+
 }

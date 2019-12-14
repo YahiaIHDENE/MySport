@@ -1,19 +1,20 @@
 package mysport;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonObject;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
-import javax.ws.rs.core.MediaType;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Locale;
 
 @Path("/")
-public class AnnonceHandler {
+public class AnnonceHandler{
 
     private static final String url = "jdbc:mysql://localhost:9002";
     private static final String user = "user";
@@ -22,7 +23,7 @@ public class AnnonceHandler {
     private Connection conn;
     private Gson gson;
 
-    public AnnonceHandler(){
+    public AnnonceHandler() throws ParseException {
         gson = new Gson();
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -34,64 +35,76 @@ public class AnnonceHandler {
     }
 
     @GET
-    @Path("/adduser/{user}")
-    public int addUser(@PathParam("user") String user) {
-        User received_user = gson.fromJson(user, User.class);
-	//String test = "SELECT COUNT(*) FROM mysportdb.t_user WHERE user_mail ='"+received_user.getEmail()+"'";
+    @Path("/addAnnonce/{annonce}")
+    public String addAnnonce(@PathParam("annonce") String annonce){
+        Gson gson = new Gson();
+        System.out.println(annonce);
+        // get json objet
+        JsonObject json  =  gson.fromJson(annonce,JsonObject.class);
+        //get id user
+        int id_user = json.get("idUser").getAsInt();
 
-        String INSERT = "INSERT INTO myDb.t_user (user_first_name," +
-                                                     " user_last_name," +
-                                                     " user_mail," +
-                                                     " user_password," +
-                                                     " user_tel)" +
-                                         " VALUES ('"+ received_user.getFirstname() + "', '"+
-                                                      received_user.getLastname() + "', '"+
-                                                      received_user.getEmail() + "', '"+
-                                                      received_user.getPW() + "', '"+
-                                                      received_user.getNumber() + "')";
+        //get date debut date fin --> meme
+        String datedebut = json.get("dateDisponible").getAsString();
+        String datefin = json.get("dateDisponible").getAsString();
+        String heure_debut = json.get("creneau").getAsString();
+        String heure_fin = json.get("creneau").getAsString();
+
+
+        SimpleDateFormat ft = new SimpleDateFormat("MMM dd, yyyy, hh:mm:ss a", Locale.US);
+        try {
+            java.util.Date tmpDateDebut= ft.parse(datedebut);
+            java.util.Date tmpDateFin= ft.parse(datedebut);
+            java.util.Date tmpHeureDebut= ft.parse(datedebut);
+            java.util.Date tmpHeureFin= ft.parse(datedebut);
+
+            ft.applyPattern("yyyy-MM-dd");
+            datedebut = ft.format(tmpDateDebut);
+            datefin = ft.format(tmpDateFin);
+            ft.applyPattern("hh:mm:ss");
+            heure_debut=ft.format(tmpHeureDebut);
+            heure_fin=ft.format(tmpHeureFin);
+        }catch (ParseException ex){
+            ex.getMessage();
+        }
+        // get Terrain and construit terrain
+        FactoryItem f= new FactoryItem();
+        Item i = f.getInstanceItem(json.get("typeItem").getAsString());
+        Item terr = (Item) gson.fromJson(json.get("terrain"),i.getClass());
+
+
+        String INSERT = "INSERT INTO myDb.t_annonce ( id_user, jour_debut,jour_fin, heure_debut, heure_fin) VALUES " +
+                "("+ id_user    +","
+                +"'"+datedebut  +"',"
+                +"'"+datefin    +"',"
+                +"'"+heure_debut+"',"
+                +"'"+heure_fin  +"')";
 
         System.out.println(INSERT);
-        try {
-            /* ps.conn.prepareStatement(test);
-             ResultSet rs= ps.executeQuery();
-	     while(rs.next()){
-        		count=rs.getInt(1);
-			if (count>0){
-				return 0;
-			}
-			else{....
-		*/
-	ps = conn.prepareStatement(INSERT);
+
+        return INSERT;
+    }
+
+
+    /*
+
+        String INSERT = "INSERT INTO myDb.t_annonce ( id_user, jour_debut, heure_debut, heure_fin, jour_fin) VALUES ( '1'," +
+                " '2019-12-12', '10:00:00', '18:00:00', '2019-12-15')";
+        System.out.println(INSERT);
+        System.out.println(annonce);
+
+        return gson.toJson(INSERT);
+*/
+        /*try{
+            ps = conn.prepareStatement(INSERT);
             ps.execute();
             return 0;
-        } catch (Exception e){
+        }    catch (Exception e){
             e.printStackTrace();
             System.out.println(e);
             return -1;
-        }
-    }
-
-    @GET
-    @Path("/fetchuser/{id}")
-    @Produces(MediaType.APPLICATION_JSON)
-    public String fetchUser(@PathParam("id") String id){
-        Integer id_user = gson.fromJson(id, Integer.class);
-        String SELECT = "SELECT * FROM myDb.t_user WHERE id_user="+id_user.intValue();
-        try {
-            ps = conn.prepareStatement(SELECT);
-            ResultSet rs = ps.executeQuery();
-            if (rs.next()){
-                User user = new User(rs.getString("user_last_name"), rs.getString("user_last_name"), rs.getString("user_mail"), rs.getString("user_tel"), rs.getString("user_password"));
-                user.setId(Integer.parseInt(rs.getString("id_user")));
-                return gson.toJson(user);
-            } else {
-                return gson.toJson(new String("Can't construct object user"));
-            }
-        } catch (Exception e){
-            e.printStackTrace();
-            return gson.toJson(new String("Failure"));
-        }
+        }*/
 
 
-    }
+
 }

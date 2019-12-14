@@ -51,6 +51,16 @@ public class test {
         Type listType2 = new TypeToken<ArrayList<AnnonceDeserialize>>(){}.getType();
         ArrayList<Annonce> annonces2 = gsb.fromJson(receivedannonces, listType2);
         System.out.println(annonces2.size());
+        String date = "2018-02-08";
+        String time = "08:01:02";
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        Date d1 = sdf.parse(date);
+        SimpleDateFormat sdf2 = new SimpleDateFormat("hh:mm:ss");
+
+        Date d2 = sdf2.parse(time);
+
+        System.out.println(d1.toString());
+        System.out.println(d2.toString());
 
         }
 
