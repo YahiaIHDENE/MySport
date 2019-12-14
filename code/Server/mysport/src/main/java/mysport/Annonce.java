@@ -1,5 +1,4 @@
 package mysport;
-
 import java.util.Date;
 
 public class Annonce {

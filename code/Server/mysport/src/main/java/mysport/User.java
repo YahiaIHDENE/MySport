@@ -1,5 +1,4 @@
 package mysport;
-
 public class User {
     private String lastname;
     private String firstname;

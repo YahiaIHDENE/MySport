@@ -66,7 +66,7 @@ public class UserHandler{
 			}
 			else{....
 		*/
-	ps = conn.prepareStatement(INSERT);
+	        ps = conn.prepareStatement(INSERT);
             ps.execute();
             return 0;
         } catch (Exception e){
