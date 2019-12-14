@@ -30,8 +30,6 @@ public class UserHandler{
     @Path("/adduser/{user}")
     public int addUser(@PathParam("user") String user) {
         User received_user = gson.fromJson(user, User.class);
-	//String test = "SELECT COUNT(*) FROM mysportdb.t_user WHERE user_mail ='"+received_user.getEmail()+"'";
-	
         String INSERT = "INSERT INTO mysportdb.t_user (user_first_name," +
                                                      " user_last_name," +
                                                      " user_mail," +
@@ -43,16 +41,7 @@ public class UserHandler{
                                                       received_user.getPW() + "', '"+
                                                       received_user.getNumber() + "')";
         try {
-            /* ps.conn.prepareStatement(test);
-             ResultSet rs= ps.executeQuery();
-	     while(rs.next()){
-        		count=rs.getInt(1);
-			if (count>0){
-				return 0;				
-			}
-			else{....			
-		*/
-	ps = conn.prepareStatement(INSERT);
+	        ps = conn.prepareStatement(INSERT);
             ps.execute();
             return 0;
         } catch (Exception e){
@@ -61,11 +50,14 @@ public class UserHandler{
     }
 
     @GET
-    @Path("/fetchuser/{id}")
+    @Path("/fetchuser/{email}/{pw}")
     @Produces(MediaType.APPLICATION_JSON)
-    public String fetchUser(@PathParam("id") String id){
-        Integer id_user = gson.fromJson(id, Integer.class);
-        String SELECT = "SELECT * FROM mysportdb.t_user WHERE id_user="+id_user.intValue();
+    public String fetchUser(@PathParam("email") String email, @PathParam("pw") String pw){
+
+        String user_email = gson.fromJson(email, String.class);
+        String user_pw = gson.fromJson(pw, String.class);
+
+        String SELECT = "SELECT * FROM mysportdb.t_user WHERE user_mail='"+user_email+"' AND user_password='"+user_pw+"'";
         try {
             ps = conn.prepareStatement(SELECT);
             ResultSet rs = ps.executeQuery();
@@ -79,6 +71,24 @@ public class UserHandler{
         } catch (Exception e){
             e.printStackTrace();
             return gson.toJson(null);
+        }
+    }
+
+    @GET
+    @Path("/updateuser/{user}")
+    public int updateUser(@PathParam("user") String user) {
+        User received_user = gson.fromJson(user, User.class);
+        String INSERT = "UPDATE mysportdb.t_user SET user_first_name= '"    + received_user.getFirstname() +"'," +
+                                                   " user_last_name = '"    + received_user.getLastname() + "'," +
+                                                   " user_password = '"     + received_user.getPW() + "'," +
+                                                   " user_tel = '"          + received_user.getNumber() + "'" +
+                                              "WHERE id_user = "            + received_user.getId();
+        try {
+            ps = conn.prepareStatement(INSERT);
+            ps.execute();
+            return 0;
+        } catch (Exception e){
+            return -1;
         }
     }
 }

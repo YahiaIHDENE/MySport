@@ -64,6 +64,4 @@ public class UserHandler {
         };
         userHandler.fetchUser(id_user).enqueue(cb);
     }
-
-
 }

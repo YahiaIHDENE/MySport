@@ -16,5 +16,4 @@ public class MySportApp extends Application {
     public Set<Object> getSingletons() {
         return singletons;
     }
-
 }
