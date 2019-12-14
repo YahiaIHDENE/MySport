@@ -1,35 +1,39 @@
 package mysport;
 
+
 public class Terrain extends Item {
 
     String nom,codePostal,adresse,typeSport,ville;
-
     int capacity;
     int id;
 
-    public  Terrain(String nom,String adresse,String codePostal,String typeSport,int capacity,String ville){
+    public Terrain(String nom, String codePostal, String adresse, String typeSport, String ville, int capacity, int id) {
         this.nom = nom;
-        this.adresse=adresse;
-        this.codePostal=codePostal;
-        this.typeSport= typeSport;
-        this.capacity=capacity;
-        this.id = -1;
+        this.codePostal = codePostal;
+        this.adresse = adresse;
+        this.typeSport = typeSport;
+        this.ville = ville;
+        this.capacity = capacity;
+        this.id = id;
+    }
+
+    public Terrain() {
+    }
+
+    public String getVille(){
+        return ville;
+    }
+
+    public void setVille(String ville) {
         this.ville = ville;
     }
 
-
-    public Terrain(){};
     public String getTypeSport() {
         return typeSport;
     }
 
     public void setTypeSport(String typeSport) {
         this.typeSport = typeSport;
-    }
-
-    @Override
-    public void setVille(String ville) {
-        this.ville=ville;;
     }
 
     public int getId() {
@@ -71,9 +75,8 @@ public class Terrain extends Item {
     public void setCapacity(int capacity) {
         this.capacity = capacity;
     }
-    @Override
+
     public String getClassName() {
         return "Terrain";
     }
-    public String getVille(){return this.ville;}
 }

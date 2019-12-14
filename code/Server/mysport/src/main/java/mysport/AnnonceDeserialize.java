@@ -1,5 +1,6 @@
 package mysport;
 
+
 import com.google.gson.*;
 
 import java.lang.reflect.Type;
@@ -17,25 +18,19 @@ public class AnnonceDeserialize implements JsonDeserializer<Annonce> {
         FactoryItem f = new FactoryItem();
         String typeItem = json.get("typeItem").getAsString();
         Item i = f.getInstanceItem(typeItem);
-        // TODO : annonce json .get Terrain  va être modifier en item
 
         Item terr = (Item) new Gson().fromJson(json.get("terrain"), i.getClass());
         System.out.println("tterain "+ terr.getAdresse());
-        String datedebut = json.get("dateDisponible").getAsString();
-        // TODO : peut etre modifier, le format de date
-        SimpleDateFormat ft = new SimpleDateFormat("MMM dd, yyyy, hh:mm:ss a", Locale.US);
-        java.util.Date tmpDateDebut =new Date();
-        java.util.Date tmpCreneau=new Date();
-        try {
-            tmpDateDebut = ft.parse(datedebut);
-            tmpCreneau= ft.parse(json.get("creneau").getAsString());
-        }catch (Exception e) {};
+
+
         Annonce annonce = new Annonce();
-        annonce.setDateDisponible(tmpDateDebut);
+        annonce.setIdAnnonce(json.get("idAnnonce").getAsInt());
+        annonce.setDateDisponible(json.get("dateDisponible").getAsString());
+        annonce.setHeureDebut(json.get("heureDebut").getAsString());
+        annonce.setHeureFin(json.get("heureFin").getAsString());
         annonce.setTerrain(terr);
         annonce.setTypeItem(typeItem);
-        annonce.setCreneau(tmpCreneau);
-        annonce.setIdUser(json.get("idUser").getAsInt());
+        annonce.setId_userPublier(json.get("id_userPublier").getAsInt());
         annonce.setNombreDePlaceRestant(json.get("nombreDePlaceRestant").getAsInt());
         return annonce;
     }

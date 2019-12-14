@@ -1,39 +1,52 @@
 package mysport;
 
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 public class Annonce {
-    Date dateDisponible,creneau;
-    int nombreDePlaceRestant=0;
+    String dateDisponible, heureDebut,heureFin;
+    int nombreDePlaceRestant=0,id_userPublier=0,idAnnonce;
     Item terrain;
-    int idUser=0;
-    String typeItem;
-    public Annonce(){};
+    private String typeItem;
 
-    public Annonce(Date dateDisponible,Date creneau, Item terrain){
-        this.dateDisponible= dateDisponible;
-        this.creneau =creneau;
-        this.terrain = terrain;
-        int idUser=0;
-        int nombreDePlaceRestant=0;
-
-        this.typeItem = terrain.getClassName();
+    public int getIdAnnonce() {
+        return idAnnonce;
     }
 
-    public Date getDateDisponible() {
+    public void setIdAnnonce(int idAnnonce) {
+        this.idAnnonce = idAnnonce;
+    }
+
+    public int getId_userPublier() {
+        return id_userPublier;
+    }
+
+    public void setId_userPublier(int id_userPublier) {
+        this.id_userPublier = id_userPublier;
+    }
+
+    public String getDateDisponible() {
         return dateDisponible;
     }
 
-    public void setDateDisponible(Date dateDisponible) {
+    public void setDateDisponible(String dateDisponible) {
         this.dateDisponible = dateDisponible;
     }
 
-    public Date getCreneau() {
-        return creneau;
+    public String getHeureDebut() {
+        return heureDebut;
     }
 
-    public void setCreneau(Date creneau) {
-        this.creneau = creneau;
+    public void setHeureDebut(String heureDebut) {
+        this.heureDebut = heureDebut;
+    }
+
+    public String getHeureFin() {
+        return heureFin;
+    }
+
+    public void setHeureFin(String heureFin) {
+        this.heureFin = heureFin;
     }
 
     public int getNombreDePlaceRestant() {
@@ -44,20 +57,13 @@ public class Annonce {
         this.nombreDePlaceRestant = nombreDePlaceRestant;
     }
 
-    public int getIdUser() {
-        return idUser;
-    }
-    public void setIdUser(int idUser){
-        this.idUser = idUser;
-    }
-
     public Item getTerrain() {
         return terrain;
     }
-    public void setTerrain(Item terrain) {
 
+    public void setTerrain(Item terrain) {
         this.terrain = terrain;
-        setTypeItem(terrain.getClassName());
+        //setTypeItem(terrain.getClassName());
     }
 
     public void setTypeItem(String typeItem){
