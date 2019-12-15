@@ -6,7 +6,9 @@ public class FactoryItem {
 
         if (str.equals("Terrain"))
             return new Terrain();
-
+        if( str.endsWith("Equipement")){
+            return new Equipement();
+        }
         return null;
     }
 }

@@ -19,4 +19,20 @@ public abstract class Item
     public abstract void setId(int id);
     public abstract void setTypeSport(String typeSport);
     public abstract void setVille(String ville);
+    public String getDescription(Item a ){
+        if (a instanceof Equipement ){
+            Equipement e = (Equipement)a ;
+            return e.getDescription();
+        }
+        return  "";
+    }/*
+    public void setDescription(Item a, String str){
+    if (a instanceof Equipement ){
+        Equipement e = (Equipement)a ;
+        e.setDescription(str);
+    }
+    }
+
+    protected abstract void setDescription(String str);
+*/
 }
