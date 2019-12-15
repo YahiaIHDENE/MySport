@@ -7,90 +7,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7d51c2d-7a80-49cb-b8db-67ef33c12a7e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/mysport_war.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/mysport_war_exploded.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mysport/InsertBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mysport/Annonce.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mysport/Annonce.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mysport/AnnonceDeserialize.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mysport/AnnonceDeserialize.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mysport/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mysport/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mysport/UserHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mysport/UserHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mysport/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mysport/test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/mysport.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mysport/Annonce.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mysport/AnnonceDeserialize.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mysport/AnnonceHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mysport/FactoryItem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mysport/Item.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mysport/FactoryItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mysport/FactoryItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mysport/MySportApp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mysport/UserHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mysport/Annonce.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mysport/Annonce.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mysport/AnnonceDeserialize.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mysport/AnnonceDeserialize.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mysport/FactoryItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mysport/FactoryItem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mysport/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mysport/Item.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mysport/MySportApp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mysport/Recherche.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mysport/Terrain.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mysport/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mysport/Recherche.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mysport/Recherche.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mysport/Terrain.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mysport/Terrain.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mysport/UserHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mysport/test$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mysport/test$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mysport/test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mysport.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/mysport.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mysport/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mysport/WEB-INF/classes/META-INF/mysport.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mysport/WEB-INF/classes/mysport/Annonce.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mysport/WEB-INF/classes/mysport/AnnonceDeserialize.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mysport/WEB-INF/classes/mysport/AnnonceHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mysport/WEB-INF/classes/mysport/FactoryItem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mysport/WEB-INF/classes/mysport/Item.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mysport/WEB-INF/classes/mysport/MySportApp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mysport/WEB-INF/classes/mysport/Recherche.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mysport/WEB-INF/classes/mysport/Terrain.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mysport/WEB-INF/classes/mysport/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mysport/WEB-INF/classes/mysport/UserHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mysport/WEB-INF/classes/mysport/test$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mysport/WEB-INF/classes/mysport/test$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mysport/WEB-INF/classes/mysport/test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mysport/WEB-INF/lib/activation-1.1.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mysport/WEB-INF/lib/annotations-java5-18.0.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mysport/WEB-INF/lib/commons-codec-1.9.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mysport/WEB-INF/lib/commons-io-2.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mysport/WEB-INF/lib/commons-logging-1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mysport/WEB-INF/lib/converter-gson-2.0.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mysport/WEB-INF/lib/gson-2.8.6.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mysport/WEB-INF/lib/httpclient-4.5.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mysport/WEB-INF/lib/httpcore-4.4.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mysport/WEB-INF/lib/jackson-annotations-2.9.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mysport/WEB-INF/lib/jackson-core-2.9.8.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mysport/WEB-INF/lib/jackson-databind-2.9.8.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mysport/WEB-INF/lib/jakarta.activation-1.2.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mysport/WEB-INF/lib/jakarta.activation-api-1.2.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mysport/WEB-INF/lib/jakarta.annotation-api-1.3.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mysport/WEB-INF/lib/jakarta.inject-2.5.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mysport/WEB-INF/lib/jakarta.json-1.1.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mysport/WEB-INF/lib/jakarta.json-api-1.1.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mysport/WEB-INF/lib/jakarta.ws.rs-api-2.1.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mysport/WEB-INF/lib/jakarta.xml.bind-api-2.3.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mysport/WEB-INF/lib/javax.activation-api-1.2.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mysport/WEB-INF/lib/jaxb-api-2.3.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mysport/WEB-INF/lib/jboss-annotations-api_1.2_spec-1.0.0.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mysport/WEB-INF/lib/jboss-jaxrs-api_2.0_spec-1.0.1.Beta1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mysport/WEB-INF/lib/jboss-logging-3.3.0.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mysport/WEB-INF/lib/jcip-annotations-1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mysport/WEB-INF/lib/jersey-common-2.29.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mysport/WEB-INF/lib/jersey-entity-filtering-2.29.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mysport/WEB-INF/lib/jersey-media-moxy-2.29.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mysport/WEB-INF/lib/json-simple-1.1.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mysport/WEB-INF/lib/mysql-connector-java-8.0.18.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mysport/WEB-INF/lib/okhttp-3.2.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mysport/WEB-INF/lib/okio-1.6.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mysport/WEB-INF/lib/org.eclipse.persistence.asm-2.7.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mysport/WEB-INF/lib/org.eclipse.persistence.core-2.7.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mysport/WEB-INF/lib/org.eclipse.persistence.moxy-2.7.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mysport/WEB-INF/lib/osgi-resource-locator-1.0.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mysport/WEB-INF/lib/protobuf-java-3.6.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mysport/WEB-INF/lib/resteasy-client-3.1.4.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mysport/WEB-INF/lib/resteasy-jaxrs-3.1.4.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mysport/WEB-INF/lib/resteasy-jaxrs-services-3.1.4.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mysport/WEB-INF/lib/retrofit-2.0.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mysport/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mysport/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mysport/test$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mysport/test$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mysport/test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mysport/test.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -224,7 +156,7 @@
       <recent name="mysport" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.mysport">
+  <component name="RunManager" selected="Application.test">
     <configuration name="test" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="mysport.test" />
       <module name="mysport" />
@@ -506,6 +438,7 @@
       <workItem from="1576181810078" duration="63738000" />
       <workItem from="1576314719931" duration="7613000" />
       <workItem from="1576322826032" duration="506000" />
+      <workItem from="1576412472869" duration="9414000" />
     </task>
     <servers />
   </component>
@@ -551,9 +484,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="801" y="264" width="374" height="577" key="#com.intellij.ide.util.MemberChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1576282582782" />
-    <state x="726" y="301" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1576234045482">
-      <screen x="67" y="27" width="1853" height="1053" />
+    <state x="546" y="214" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1576419789203">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="546" y="214" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1576419789203" />
     <state x="726" y="301" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1576234045482" />
     <state x="465" y="22" key="#mysport" timestamp="1576314803604">
       <screen x="0" y="0" width="1536" height="824" />
@@ -572,25 +506,25 @@
     </state>
     <state x="534" y="287" width="637" height="466" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1576322314064" />
     <state x="1051" y="432" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1576225624536" />
-    <state width="1189" height="255" key="GridCell.Tab.0.bottom" timestamp="1576323289855">
+    <state width="723" height="388" key="GridCell.Tab.0.bottom" timestamp="1576428221670">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1189" height="255" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1576323289855" />
+    <state width="723" height="388" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1576428221670" />
     <state width="1279" height="370" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1576292714579" />
-    <state width="1189" height="255" key="GridCell.Tab.0.center" timestamp="1576323289855">
+    <state width="723" height="388" key="GridCell.Tab.0.center" timestamp="1576428221670">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1189" height="255" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1576323289855" />
+    <state width="723" height="388" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1576428221670" />
     <state width="1279" height="370" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1576292714579" />
-    <state width="1189" height="255" key="GridCell.Tab.0.left" timestamp="1576323289854">
+    <state width="723" height="388" key="GridCell.Tab.0.left" timestamp="1576428221669">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1189" height="255" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1576323289854" />
+    <state width="723" height="388" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1576428221669" />
     <state width="1279" height="370" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1576292714579" />
-    <state width="1189" height="255" key="GridCell.Tab.0.right" timestamp="1576323289855">
+    <state width="723" height="388" key="GridCell.Tab.0.right" timestamp="1576428221670">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1189" height="255" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1576323289855" />
+    <state width="723" height="388" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1576428221670" />
     <state width="1279" height="370" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1576292714579" />
     <state width="1189" height="255" key="GridCell.Tab.1.bottom" timestamp="1576323054876">
       <screen x="0" y="0" width="1536" height="824" />
@@ -677,9 +611,10 @@
     </state>
     <state x="65" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1576322698827" />
     <state x="145" y="27" width="1536" height="1053" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1576284136154" />
-    <state x="649" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1576181813636">
-      <screen x="67" y="27" width="1853" height="1053" />
+    <state x="482" y="276" key="com.intellij.ide.util.TipDialog" timestamp="1576412551684">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="482" y="276" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1576412551684" />
     <state x="649" y="380" key="com.intellij.ide.util.TipDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1576181813636" />
     <state x="566" y="200" width="844" height="704" key="com.intellij.javaee.view.ServerArtifactsDialog" timestamp="1576255593585">
       <screen x="67" y="27" width="1853" height="1053" />
