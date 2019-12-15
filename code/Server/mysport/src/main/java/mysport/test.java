@@ -6,54 +6,57 @@ import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class test {
 
     public static void main(String[] args) throws ClassNotFoundException, IllegalAccessException, InstantiationException, ParseException {
         /*espace de test de serialisation et deserilisation */
-        Gson gson =new Gson();
-        User a = new User("a","b","c","d","5");
-        System.out.println(gson.toJson(a));
-        User b= new User("a","b","c","d","5");
-        List<User> users = new ArrayList<User>();
-        users.add(a);
-        users.add(b);
-        String received_users= gson.toJson(users);
-        // Specifier la listType pour une collector de type user
-        Type listType = new TypeToken<ArrayList<User>>(){}.getType();
-        List<User> my= new Gson().fromJson(received_users,listType);
-        System.out.println(my.get(1).getEmail());
-        Item terrain = new Terrain("sport1 ","dd","ddd","ddd",5, "aaa");
+        Gson gson = new Gson();
+        // creer 2 item
+        Terrain terrain = new Terrain("sport1 ", "dd", "ddd", "ddd", 5, "aaa");
+        Equipement eqq = new Equipement("d","cd","dd","ddd","dd","description",7,1);
+        // creer 2 item avec 2 type
+        Annonce ad =  new Annonce("12-15-2019","155","4545",5,1,1,terrain,"Terrain");
+        Annonce ad2 = new Annonce("12-15-2019","155","4545",5,1,1,eqq,"Equipement");
+        // transformée
+        String receivedannonce = gson.toJson(ad2);
+        System.out.println("annonce seurl "+receivedannonce +"......");
 
-        Date aujourdhui = new Date();
-        SimpleDateFormat formater = null;
-        formater = new SimpleDateFormat("dd-MM-yyyy");
-        System.out.println(formater.format(aujourdhui));
-        Annonce ad = new Annonce(aujourdhui,aujourdhui,terrain);
-        Annonce ad2 = new Annonce(aujourdhui,aujourdhui,terrain);
+        Equipement equipement=(Equipement)ad2.getItem();
+        System.out.println("Ser "+equipement.getDescription());
 
-        String receivedannonce= gson.toJson(ad2);
-        Gson gsb = new  GsonBuilder().registerTypeAdapter(Annonce.class,new AnnonceDeserialize()).create();
+        Gson gsb = new GsonBuilder().registerTypeAdapter(Annonce.class, new AnnonceDeserialize()).create();
+        String jsonannonce = gsb.toJson(ad2);
+        String jsa2= gson.toJson(ad2);
+        if ( jsa2.equals(jsonannonce)){ System.out.println("json de gson et gsb custome est la meme : true");}
 
-        Annonce maAn = gsb.fromJson(receivedannonce,Annonce.class);
-        System.out.println(maAn.getTerrain().getVille());
-
-
+        Annonce maAn = gsb.fromJson(receivedannonce, Annonce.class);
         ArrayList<Annonce> annonces = new ArrayList<Annonce>();
         annonces.add(ad);
         annonces.add(ad2);
+        String receivedannonces = gson.toJson(annonces);
+        System.out.println(receivedannonces);
 
-        String receivedannonces= gson.toJson(annonces);
-        Type listType2 = new TypeToken<ArrayList<AnnonceDeserialize>>(){}.getType();
-        ArrayList<Annonce> annonces2 = gsb.fromJson(receivedannonces, listType2);
+        Type listType = new TypeToken<List<Annonce>>(){}.getType();
+        ArrayList<Annonce> mesAnnoncesApresJson = gsb.fromJson(receivedannonces, listType);
+        Equipement aaa= (Equipement) annonces.get(1).getItem();
+        if (annonces.get(1).getItem() instanceof Equipement){System.out.println("true "+gson.toJson(aaa.getDescription()));}
+
+        /*
+
+        String c= gson.toJson(aaa.getDescription());
+        String d = gsb.toJson(annonces.get(1));
+        System.out.println("annonce perso :"+d);
+        System.out.println("json equipement :\n"+c);
+        System.out.println(gson.toJson(annonces2));
+
         System.out.println(annonces2.size());
         String date = "2018-02-08";
         String time = "08:01:02";
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+
+/*        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         Date d1 = sdf.parse(date);
         SimpleDateFormat sdf2 = new SimpleDateFormat("hh:mm:ss");
 
@@ -62,7 +65,35 @@ public class test {
         System.out.println(d1.toString());
         System.out.println(d2.toString());
 
-        }
+                Gson gson = new Gson();
+        User a = new User("a", "b", "c", "d", "5");
+        System.out.println(gson.toJson(a));
+        User b = new User("a", "b", "c", "d", "5");
+        List<User> users = new ArrayList<User>();
+        users.add(a);
+        users.add(b);
+        String received_users = gson.toJson(users);
+        // Specifier la listType pour une collector de type user
+        Type listType = new TypeToken<ArrayList<User>>() {
+        }.getType();
+        List<User> my = new Gson().fromJson(received_users, listType);
+        System.out.println(my.get(1).getEmail());
+                Date aujourdhui = new Date();
+        SimpleDateFormat formater = null;
+        formater = new SimpleDateFormat("dd-MM-yyyy");
+        System.out.println(formater.format(aujourdhui));
+*/
+
+        String querry = "";
+        RechercheBuilder querryB = new RechercheBuilder();
+        querry = querryB.setTypeItem("Terrain").whereNombreDePlaceRestant(5).
+                whereDate("2019-12-13").whereTypeSport("foot").whereVille("valeur 2").whereCreneau("08:03:28").getQuerry();
+
+        System.out.println(querry);
+
+
+
+    }
 
     }
 
