@@ -8,9 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a7d51c2d-7a80-49cb-b8db-67ef33c12a7e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mysport/UserHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mysport/UserHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mysport.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/mysport.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mysport/WEB-INF/classes/mysport/UserHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/mysport/WEB-INF/classes/mysport/UserHandler.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -170,6 +167,7 @@
       <workItem from="1576093384512" duration="11499000" />
       <workItem from="1576175971874" duration="1047000" />
       <workItem from="1576327648731" duration="84000" />
+      <workItem from="1576429592889" duration="23000" />
     </task>
     <servers />
   </component>
