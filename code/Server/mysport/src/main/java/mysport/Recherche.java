@@ -1,18 +1,23 @@
 package mysport;
-
-import java.util.Date;
-
 public class Recherche {
 
-    Date date;
+    String date,heureDebut;
     String ville,typeSport;
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
+    }
+
+    public String getHeureDebut() {
+        return heureDebut;
+    }
+
+    public void setHeureDebut(String heureDebut) {
+        this.heureDebut = heureDebut;
     }
 
     public String getVille() {
