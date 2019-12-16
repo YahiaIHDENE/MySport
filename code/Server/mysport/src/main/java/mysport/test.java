@@ -42,6 +42,31 @@ public class test {
         ArrayList<Annonce> mesAnnoncesApresJson = gsb.fromJson(receivedannonces, listType);
         Equipement aaa= (Equipement) annonces.get(1).getItem();
         if (annonces.get(1).getItem() instanceof Equipement){System.out.println("true "+gson.toJson(aaa.getDescription()));}
+        Recherche recherche = new Recherche("2019-12-13","08:03:28","valeur 2","foot","Terrain");
+        String rechercheString = gsb.toJson(recherche ,Recherche.class);
+        System.out.println("recherche"+rechercheString);
+        RechercheBuilder rechercheBuilder = new RechercheBuilder();
+        if (   recherche.getTypeItem() != null ||recherche.getTypeItem()!=""){
+            rechercheBuilder.setTypeItem(recherche.getTypeItem());
+        }
+
+        if (   recherche.getDate() != null ||recherche.getDate()!=""){
+            rechercheBuilder.whereDate(recherche.getDate());
+        }
+
+        if (   recherche.getHeureDebut() != null ||recherche.getHeureDebut()!=""){
+            rechercheBuilder.whereHeure_debut(recherche.getHeureDebut());
+        }
+
+        if (   recherche.getTypeSport() != null ||recherche.getTypeSport()!=""){
+            rechercheBuilder.whereTypeSport(recherche.getTypeSport());
+        }
+
+        if (   recherche.getVille() != null ||recherche.getVille()!=""){
+            rechercheBuilder.whereVille(recherche.getVille());
+        }
+
+        String querry = rechercheBuilder.getQuerry();
 
         /*
 
@@ -83,10 +108,9 @@ public class test {
         System.out.println(formater.format(aujourdhui));
 */
 
-        String querry = "";
         RechercheBuilder querryB = new RechercheBuilder();
-        querry = querryB.setTypeItem("Terrain").whereNombreDePlaceRestant(5).
-                whereDate("2019-12-13").whereTypeSport("foot").whereVille("valeur 2").whereCreneau("08:03:28").getQuerry();
+       // querry = querryB.setTypeItem("Terrain").whereNombreDePlaceRestant(5).
+         //       whereDate("2019-12-13").whereTypeSport("foot").whereVille("valeur 2").whereCreneau("08:03:28").getQuerry();
 
         System.out.println(querry);
 

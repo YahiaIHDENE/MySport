@@ -24,7 +24,7 @@ public class RechercheBuilder {
         //TODO id.terrain changer en id.item
         // exemple  SELECT * FROM t_annonce INNER JOIN t_terrain on t_terrain.id_terrain = t_annonce.id_terrain
         this.typeItem=typeItem;
-        querry += " myDb.t_"+typeItem.toLowerCase()+" on myDb.t_annonce.id_item = myDb.t_"+typeItem.toLowerCase()+".id_"+typeItem.toLowerCase();
+        querry += " myDb.t_"+typeItem.toLowerCase()+" on myDb.t_annonce.id_t = myDb.t_"+typeItem.toLowerCase()+".id_"+typeItem.toLowerCase();
         return this;
     }
 
@@ -49,7 +49,7 @@ public class RechercheBuilder {
         count++;        return this;
 
     }
-    public RechercheBuilder whereCreneau(String heure_debut){
+    public RechercheBuilder whereHeure_debut(String heure_debut){
         querry += whereORand();
         querry += "heure_debut ='";
         querry += heure_debut + "'";
@@ -75,6 +75,8 @@ public class RechercheBuilder {
 
     public String getQuerry(){
         String tmp = querry;
+        querry = " SELECT * FROM myDb.t_annonce INNER JOIN";
+
         return tmp;
     }
 

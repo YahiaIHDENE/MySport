@@ -1,11 +1,27 @@
 package mysport;
 public class Recherche {
 
-    String date,heureDebut;
+    String date,heureDebut,typeItem;
     String ville,typeSport;
+
+    public Recherche(String date, String heureDebut, String ville, String typeSport,String typeItem) {
+        this.date = date;
+        this.heureDebut = heureDebut;
+        this.ville = ville;
+        this.typeSport = typeSport;
+        this.typeItem = typeItem;
+    }
 
     public String getDate() {
         return date;
+    }
+
+    public String getTypeItem() {
+        return typeItem;
+    }
+
+    public void setTypeItem(String typeItem) {
+        this.typeItem = typeItem;
     }
 
     public void setDate(String date) {
