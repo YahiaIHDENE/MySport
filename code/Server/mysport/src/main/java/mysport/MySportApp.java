@@ -10,7 +10,7 @@ public class MySportApp extends Application {
 
     public MySportApp() {
         // Register our services here
-        singletons.add(new UserHandler());
+        singletons.add(new DBAccessor());
     }
     @Override
     public Set<Object> getSingletons() {
