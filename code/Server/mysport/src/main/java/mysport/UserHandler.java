@@ -13,9 +13,9 @@ import com.google.gson.GsonBuilder;
 @Path("/")
 public class UserHandler {
 
-    private static final String url = "jdbc:mysql://localhost";
-    private static final String user = "mysportuser";
-    private static final String password = "";
+    private static final String url = "jdbc:mysql://localhost:9002";
+    private static final String user = "user";
+    private static final String password = "test";
     private PreparedStatement ps;
     private Connection conn;
     private Gson gson;
@@ -34,7 +34,7 @@ public class UserHandler {
     @Path("/adduser/{user}")
     public int addUser(@PathParam("user") String user) {
         User received_user = gson.fromJson(user, User.class);
-        String INSERT = "INSERT INTO mysportdb.t_user (user_first_name," +
+        String INSERT = "INSERT INTO myDb.t_user (user_first_name," +
                 " user_last_name," +
                 " user_mail," +
                 " user_password," +
@@ -58,7 +58,7 @@ public class UserHandler {
     @Produces(MediaType.APPLICATION_JSON)
     public String fetchUser(@PathParam("id") String id) {
         Integer id_user = gson.fromJson(id, Integer.class);
-        String SELECT = "SELECT * FROM mysportdb.t_user WHERE id_user=" + id_user.intValue();
+        String SELECT = "SELECT * FROM myDb.t_user WHERE id_user=" + id_user.intValue();
         try {
             ps = conn.prepareStatement(SELECT);
             ResultSet rs = ps.executeQuery();
@@ -87,7 +87,7 @@ public class UserHandler {
         //Reservation received_reservation = new Reservation("12-12-2022", 1, 3,3,"12:00","14:00");
         //received_annonce.setId_reserve(0);received_annonce.id_annonce=1,received_annonce.id_user=5,received_annonce.nombreDePlace=6,received_annonce.date='2020-05-06',received_annonce.heure_debut='16:00:00',received_annonce.heure_fin='18:00:00'
 
-        String INSERT = "INSERT INTO mysportdb.t_reserve (id_annonce," +
+        String INSERT = "INSERT INTO myDb.t_reserve (id_annonce," +
                 " id_user," +
                 " nombre_reserve," +
                 " jour_reserve," +
@@ -100,7 +100,7 @@ public class UserHandler {
                 received_reservation.getHeureDebut() + "', '" +
                 received_reservation.getHeureFin() + "') ";
 /*
-        String INSERT= "INSERT INTO mysportdb.t_reserve (id_annonce," +
+        String INSERT= "INSERT INTO myDb.t_reserve (id_annonce," +
                 " id_user," +
                 " nombre_reserve," +
                 " jour_reserve," +
@@ -116,7 +116,7 @@ public class UserHandler {
             ps = conn.prepareStatement(INSERT);
             ps.execute();
             System.out.println("reservation : 1er try ok  ps!!!!!");
-            String SELECT = "SELECT place_restant FROM mysportdb.t_annonce WHERE id_annonce= '" + received_reservation.getIdAnnonce() + "'";
+            String SELECT = "SELECT place_restant FROM myDb.t_annonce WHERE id_annonce= '" + received_reservation.getIdAnnonce() + "'";
             System.out.println("reservation : 1er try ok !!!!!");
 
             try {
@@ -133,7 +133,7 @@ public class UserHandler {
                 }
                 System.out.println("reservation : 2eme try ok ps !!!!!");
 
-                String Update = "UPDATE  mysportdb.t_annonce SET place_restant=" + diff + " WHERE id_annonce='" + received_reservation.getIdAnnonce() + "'";
+                String Update = "UPDATE  myDb.t_annonce SET place_restant=" + diff + " WHERE id_annonce='" + received_reservation.getIdAnnonce() + "'";
                 System.out.println("reservation : 2eme try ok !!!!!");
 
                 try {
@@ -172,7 +172,7 @@ public class UserHandler {
 
         System.out.println("reservation : web ok !!!!!");
         List<Reservation> listReservation = new ArrayList<Reservation>();
-        String SELECT = "SELECT * FROM mysportdb.t_reserve WHERE id_user='"+idUserReservation+"'";
+        String SELECT = "SELECT * FROM myDb.t_reserve WHERE id_user='"+idUserReservation+"'";
         System.out.println(SELECT);
         ResultSet rs = null;
         try {
@@ -218,7 +218,7 @@ public class UserHandler {
         Reservation update_reservation = gson.fromJson(reservation, Reservation.class);
         System.out.println("reservation : web ok !!!!!");
         int placeRestant=0,ancienreserve=0,nvx=0;
-        String SELECT2 = "SELECT place_restant FROM mysportdb.t_annonce WHERE id_annonce="+update_reservation.getIdAnnonce() ;
+        String SELECT2 = "SELECT place_restant FROM myDb.t_annonce WHERE id_annonce="+update_reservation.getIdAnnonce() ;
         try {
             System.out.println("reservation : 2er !!!!!");
             ps = conn.prepareStatement(SELECT2);
@@ -227,7 +227,7 @@ public class UserHandler {
                 placeRestant = rs.getInt("place_restant");
                 System.out.println("rest" + placeRestant);
             }
-                String SELECT = "SELECT nombre_reserve FROM mysportdb.t_reserve WHERE id_reserve="+update_reservation.getIdReservation();
+                String SELECT = "SELECT nombre_reserve FROM myDb.t_reserve WHERE id_reserve="+update_reservation.getIdReservation();
                 try {
                     System.out.println("reservation : 2er !!!!!");
                     ps = conn.prepareStatement(SELECT);
@@ -241,12 +241,12 @@ public class UserHandler {
                             return"Nombre de places insufisant le MAX="+placeRestant;
                         System.out.println("nouveau" + nvx);
                     }
-                    String UPDATE = "UPDATE mysportdb.t_reserve SET nombre_reserve='" + update_reservation.getNombreDePlace() + "'  WHERE id_reserve=" + update_reservation.getIdReservation();
+                    String UPDATE = "UPDATE myDb.t_reserve SET nombre_reserve='" + update_reservation.getNombreDePlace() + "'  WHERE id_reserve=" + update_reservation.getIdReservation();
                     System.out.println(UPDATE);
                     try {
                         ps = conn.prepareStatement(UPDATE);
                         ps.execute();
-                        String Update = "UPDATE  mysportdb.t_annonce SET place_restant=" + nvx + " WHERE id_annonce=" + update_reservation.getIdAnnonce();
+                        String Update = "UPDATE  myDb.t_annonce SET place_restant=" + nvx + " WHERE id_annonce=" + update_reservation.getIdAnnonce();
                         try {
                             ps = conn.prepareStatement(Update);
                             ps.execute();
@@ -281,7 +281,7 @@ public String deleteReservation( @PathParam("deleteReservation") String reservat
     int idannonce =0;
     int placeRestant =0;
     int nvx=0;
-    String SELECT = "SELECT id_annonce FROM mysportdb.t_reserve WHERE id_reserve="+ received_reservation1.getIdReservation();
+    String SELECT = "SELECT id_annonce FROM myDb.t_reserve WHERE id_reserve="+ received_reservation1.getIdReservation();
     try {
         System.out.println("reservation : 1er !!!!!");
         ps = conn.prepareStatement(SELECT);
@@ -291,7 +291,7 @@ public String deleteReservation( @PathParam("deleteReservation") String reservat
             idannonce = rs_id.getInt("id_annonce");
             System.out.println(idannonce);
         }
-        String SELECT2 = "SELECT place_restant FROM mysportdb.t_annonce WHERE id_annonce=" + idannonce ;
+        String SELECT2 = "SELECT place_restant FROM myDb.t_annonce WHERE id_annonce=" + idannonce ;
         try {
             System.out.println("reservation : 2er !!!!!");
             ps = conn.prepareStatement(SELECT2);
@@ -306,12 +306,12 @@ public String deleteReservation( @PathParam("deleteReservation") String reservat
 
             }
             System.out.println("reservation : 1er try ok !!!!!");
-            String Update = "UPDATE  mysportdb.t_annonce SET place_restant=" + nvx + " WHERE id_annonce="+ idannonce;
+            String Update = "UPDATE  myDb.t_annonce SET place_restant=" + nvx + " WHERE id_annonce="+ idannonce;
             try {
                 ps = conn.prepareStatement(Update);
                 ps.execute();
                 System.out.println("reservation : mise a jour de place rest!!!!!");
-                String DELETE = "DELETE FROM mysportdb.t_reserve WHERE id_reserve=" + received_reservation1.getIdReservation();
+                String DELETE = "DELETE FROM myDb.t_reserve WHERE id_reserve=" + received_reservation1.getIdReservation();
                 try {
                     ps = conn.prepareStatement(DELETE);
                     ps.execute();
@@ -371,7 +371,7 @@ public String deleteReservation( @PathParam("deleteReservation") String reservat
 System.out.println(terrain.getNom()+"\n"+terrain.getAdresse()+"\n"+terrain.getCapacity()+"\n"+terrain.getCodePostal()+"\n"+terrain.getTypeSport()+"\n"+terrain.getVille());
 System.out.println(received_annonce.getDateDisponible()+"\n"+received_annonce.getHeureDebut()+"\n"+received_annonce.getHeureFin()+"\n"+received_annonce.getId_userPublier()+"\n"+received_annonce.getNombreDePlaceRestant());
 */
-        String INSERT = "INSERT INTO mysportdb.t_terrain(id_annonce," +
+        String INSERT = "INSERT INTO myDb.t_terrain(id_annonce," +
                 "adresse," +
                 "ville," +
                 "code_postal," +
@@ -389,7 +389,7 @@ System.out.println(received_annonce.getDateDisponible()+"\n"+received_annonce.ge
             ps = conn.prepareStatement(INSERT);
             ps.execute();
             System.out.println("Ajout terrain!!!!!");
-            String SELECT = "SELECT id_terrain FROM mysportdb.t_terrain WHERE adresse = '" +(received_annonce.getTerrain().getAdresse()) + "'AND code_postal='"+(received_annonce.getTerrain().getCodePostal())+"'AND type_sport='"+(received_annonce.getTerrain().getTypeSport())+"'";
+            String SELECT = "SELECT id_terrain FROM myDb.t_terrain WHERE adresse = '" +(received_annonce.getTerrain().getAdresse()) + "'AND code_postal='"+(received_annonce.getTerrain().getCodePostal())+"'AND type_sport='"+(received_annonce.getTerrain().getTypeSport())+"'";
             try {
                 System.out.println("id terrain !!!!!");
                 ps = conn.prepareStatement(SELECT);
@@ -400,7 +400,7 @@ System.out.println(received_annonce.getDateDisponible()+"\n"+received_annonce.ge
                     System.out.println("id_terrain ="+idterrain);
                 }
                 System.out.println("Ajout terrain ok !!!!!");
-                String INSERT2 = "INSERT INTO mysportdb.t_annonce(id_user,jour_debut,heure_debut,heure_fin,place_restant,id_terrain) VALUES(" +
+                String INSERT2 = "INSERT INTO myDb.t_annonce(id_user,jour_debut,heure_debut,heure_fin,place_restant,id_terrain) VALUES(" +
                         "'"+received_annonce.getId_userPublier()+"'," +
                         "'"+received_annonce.getDateDisponible()+"'," +
                         "'"+received_annonce.getHeureDebut()+"'," +
@@ -436,8 +436,8 @@ System.out.println(received_annonce.getDateDisponible()+"\n"+received_annonce.ge
     @Produces(MediaType.APPLICATION_JSON)
     public String getMesAnnonces(@PathParam("id_user") String id){
         Integer id_user = gson.fromJson(id, Integer.class);
-        String SELECT = "SELECT * FROM mysportdb.t_annonce INNER JOIN mysportdb.t_terrain WHERE mysportdb.t_terrain.id_terrain = mysportdb.t_annonce.id_terrain " +
-                "and mysportdb.t_annonce.id_user ="+ id_user;
+        String SELECT = "SELECT * FROM myDb.t_annonce INNER JOIN myDb.t_terrain on myDb.t_terrain.id_terrain = myDb.t_annonce.id_terrain " +
+                "and myDb.t_annonce.id_user ="+ id_user;
         System.out.println(SELECT);
         ArrayList<Annonce> mesAnnonces = new ArrayList<Annonce>();
         ResultSet rs =null;
@@ -485,8 +485,8 @@ System.out.println(received_annonce.getDateDisponible()+"\n"+received_annonce.ge
     @GET
     @Path("/annonce/toutesAnnonces/")
     @Produces(MediaType.APPLICATION_JSON)
-    public String getALLAnnonces(){
-        String SELECT = "SELECT * FROM mysportdb.t_annonce INNER JOIN mysportdb.t_terrain WHERE mysportdb.t_terrain.id_terrain = mysportdb.t_annonce.id_terrain ";
+    public String wgetALLAnnonces(){
+        String SELECT = "SELECT * FROM myDb.t_annonce INNER JOIN myDb.t_terrain where myDb.t_terrain.id_terrain = myDb.t_annonce.id_terrain ";
         System.out.println(SELECT);
         ArrayList<Annonce> mesAnnonces = new ArrayList<Annonce>();
         ResultSet rs =null;
@@ -508,17 +508,19 @@ System.out.println(received_annonce.getDateDisponible()+"\n"+received_annonce.ge
                 terr.setTypeSport(rs.getString("type_sport"));
                 terr.setId(rs.getInt("id_terrain"));
                 terr.setVille(rs.getString("ville"));
-
+                a.setTypeItem("Terrain");
                 a.setIdAnnonce(rs.getInt("id_annonce"));
                 a.setId_userPublier(rs.getInt("id_user"));
-                a.setHeureFin(rs.getString("heure_debut"));
+                a.setHeureDebut(rs.getString("heure_debut"));
                 a.setHeureFin(rs.getString("heure_fin"));
+                a.setDateDisponible(rs.getString("jour_debut"));
                 a.setNombreDePlaceRestant(rs.getInt("place_restant"));
                 a.setTerrain(terr);
                 mesAnnonces.add(a);
 
             }
             String json= gson.toJson(mesAnnonces);
+            System.out.println(json);
 
             return (json );
 
@@ -542,7 +544,7 @@ System.out.println(received_annonce.getDateDisponible()+"\n"+received_annonce.ge
         Recherche recherche = gson.fromJson(recherchejson, Recherche.class);
         ResultSet rs =null;
         ArrayList<Annonce> resultatAnnonces = new ArrayList<Annonce>();
-       String SELECT = "SELECT * FROM mysportdb.t_annonce INNER JOIN mysportdb.t_terrain WHERE " +
+       String SELECT = "SELECT * FROM myDb.t_annonce INNER JOIN myDb.t_terrain WHERE " +
                "jour_debut='"+recherche.getDate()+" 'AND" +
                " heure_debut='"+recherche.getHeureDebut()+" 'AND" +
                " ville ='"+recherche.getVille()+" 'AND" +
@@ -565,19 +567,18 @@ System.out.println(received_annonce.getDateDisponible()+"\n"+received_annonce.ge
                 Annonce a= new Annonce();
                 FactoryItem f = new FactoryItem();
                 Item terr = f.getInstanceItem(typeItem);
-
                 terr.setAdresse(rs.getString("adresse"));
                 terr.setCapacity(rs.getInt("capacite"));
                 terr.setCodePostal(rs.getString("code_postal"));
                 terr.setTypeSport(rs.getString("type_sport"));
                 terr.setId(rs.getInt("id_terrain"));
                 terr.setVille(rs.getString("ville"));
-                System.out.println("ajout terrain  ok!!!!!");
-
+                a.setTypeItem("Terrain");
                 a.setIdAnnonce(rs.getInt("id_annonce"));
                 a.setId_userPublier(rs.getInt("id_user"));
-                a.setHeureFin(rs.getString("heure_debut"));
+                a.setHeureDebut(rs.getString("heure_debut"));
                 a.setHeureFin(rs.getString("heure_fin"));
+                a.setDateDisponible(rs.getString("jour_debut"));
                 a.setNombreDePlaceRestant(rs.getInt("place_restant"));
                 a.setTerrain(terr);
                 System.out.println("ajout annonce ok  !!!!!");
@@ -603,7 +604,7 @@ System.out.println(received_annonce.getDateDisponible()+"\n"+received_annonce.ge
 
         int id_annonce = gson.fromJson(id, int.class);
         if (id_annonce<0) return -1;
-        String  DELETE = "Delete FROM mysportdb.t_annonce WHERE mysportdb.t_annonce.id_annonce= " + id_annonce;
+        String  DELETE = "Delete FROM myDb.t_annonce WHERE myDb.t_annonce.id_annonce= " + id_annonce;
         System.out.println(DELETE);
         try {
             ps = conn.prepareStatement(DELETE);
