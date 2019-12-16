@@ -479,7 +479,7 @@ public class DBAccessor{
     // Tested
     @GET
     @Path("/annonce/deleteAnnonce/{id}")
-    public int deleteUser(@PathParam("id") String id) {
+    public int deleteAnnonce(@PathParam("id") String id) {
 
         int id_annonce = gson.fromJson(id, int.class);
         if (id_annonce<0) return -1;
